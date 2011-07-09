@@ -28,12 +28,18 @@ snippet allFrameworks
 	allFrameworks
 snippet allocWithZone:
 	allocWithZone:${1:(NSZone*)zone}
+snippet allowsReverseTransformation
+	allowsReverseTransformation
 snippet alphanumericCharacterSet
 	alphanumericCharacterSet
 snippet andPredicateWithSubpredicates:
 	andPredicateWithSubpredicates:${1:(NSArray*)subpredicates}
+snippet animateWithDuration:animations:__OSX_AVAILABLE_STARTING
+	animateWithDuration:${1:(NSTimeInterval)duration} animations:${2:(void(^)(void))animations} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
+snippet animateWithDuration:animations:completion:__OSX_AVAILABLE_STARTING
+	animateWithDuration:${1:(NSTimeInterval)duration} animations:${2:(void(^)(void))animations} completion:${3:(void(^)(BOOL finished))completion} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet animateWithDuration:delay:options:animations:completion:__OSX_AVAILABLE_STARTING
-	animateWithDuration:${1:(NSTimeInterval)duration} delay:${2:(NSTimeInterval)delay} options:${3:(UIViewAnimationOptions)options} animations:${4:(void(^)(void))animations} completion:${5:(void(^)(BOOL} finished))completion __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
+	animateWithDuration:${1:(NSTimeInterval)duration} delay:${2:(NSTimeInterval)delay} options:${3:(UIViewAnimationOptions)options} animations:${4:(void(^)(void))animations} completion:${5:(void(^)(BOOL finished))completion} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet archiveRootObject:toFile:
 	archiveRootObject:${1:(id)rootObject} toFile:${2:(NSString*)path}
 snippet archivedDataWithRootObject:
@@ -53,19 +59,27 @@ snippet arrayWithObject:
 snippet arrayWithObjects:NS_REQUIRES_NIL_TERMINATION
 	arrayWithObjects:${1:(id)firstObj,} ... NS_REQUIRES_NIL_TERMINATION
 snippet arrayWithObjects:count:
-	arrayWithObjects:${1:(const} id*)objects count:${2:(NSUInteger)cnt}
+	arrayWithObjects:${1:(const id*)objects} count:${2:(NSUInteger)cnt}
 snippet automaticallyNotifiesObserversForKey:
 	automaticallyNotifiesObserversForKey:${1:(NSString*)key}
 snippet autoupdatingCurrentCalendarNS_AVAILABLE
 	autoupdatingCurrentCalendar NS_AVAILABLE(10_5, 2_0)
 snippet autoupdatingCurrentLocaleNS_AVAILABLE
 	autoupdatingCurrentLocale NS_AVAILABLE(10_5, 2_0)
+snippet availableCaptureModesForCameraDevice:__OSX_AVAILABLE_STARTING
+	availableCaptureModesForCameraDevice:${1:(UIImagePickerControllerCameraDevice)cameraDevice} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet availableLanguages
 	availableLanguages
 snippet availableLocaleIdentifiers
 	availableLocaleIdentifiers
+snippet availableMediaTypesForSourceType:
+	availableMediaTypesForSourceType:${1:(UIImagePickerControllerSourceType)sourceType}
 snippet availableStringEncodings
 	availableStringEncodings
+snippet beginAnimations:context:
+	beginAnimations:${1:(NSString*)animationID} context:${2:(void*)context}
+snippet bestPaperForPageSize:withPapersFromArray:
+	bestPaperForPageSize:${1:(CGSize)contentSize} withPapersFromArray:${2:(NSArray*)paperList}
 snippet bezierPath
 	bezierPath
 snippet bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise:
@@ -78,12 +92,20 @@ snippet bezierPathWithRect:
 	bezierPathWithRect:${1:(CGRect)rect}
 snippet bezierPathWithRoundedRect:byRoundingCorners:cornerRadii:
 	bezierPathWithRoundedRect:${1:(CGRect)rect} byRoundingCorners:${2:(UIRectCorner)corners} cornerRadii:${3:(CGSize)cornerRadii}
+snippet bezierPathWithRoundedRect:cornerRadius:
+	bezierPathWithRoundedRect:${1:(CGRect)rect} cornerRadius:${2:(CGFloat)cornerRadius}
+snippet blackColor
+	blackColor
 snippet blockOperationWithBlock:NS_AVAILABLE
 	blockOperationWithBlock:${1:(void(^)(void))block} NS_AVAILABLE(10_6, 4_0)
+snippet blueColor
+	blueColor
 snippet boldSystemFontOfSize:
 	boldSystemFontOfSize:${1:(CGFloat)fontSize}
 snippet bookmarkDataWithContentsOfURL:error:
 	bookmarkDataWithContentsOfURL:${1:(NSURL*)bookmarkFileURL} error:${2:(NSError**)error}
+snippet brownColor
+	brownColor
 snippet bundleForClass:
 	bundleForClass:${1:(Class)aClass}
 snippet bundleWithIdentifier:
@@ -140,6 +162,8 @@ snippet classForKeyedUnarchiver
 	classForKeyedUnarchiver
 snippet classNameForClass:
 	classNameForClass:${1:(Class)cls}
+snippet clearColor
+	clearColor
 snippet colorWithCGColor:
 	colorWithCGColor:${1:(CGColorRef)cgColor}
 snippet colorWithHue:saturation:brightness:alpha:
@@ -150,6 +174,8 @@ snippet colorWithRed:green:blue:alpha:
 	colorWithRed:${1:(CGFloat)red} green:${2:(CGFloat)green} blue:${3:(CGFloat)blue} alpha:${4:(CGFloat)alpha}
 snippet colorWithWhite:alpha:
 	colorWithWhite:${1:(CGFloat)white} alpha:${2:(CGFloat)alpha}
+snippet commitAnimations
+	commitAnimations
 snippet commonISOCurrencyCodesNS_AVAILABLE
 	commonISOCurrencyCodes NS_AVAILABLE(10_5, 2_0)
 snippet componentsFromLocaleIdentifier:
@@ -174,12 +200,16 @@ snippet credentialWithIdentity:certificates:persistence:NS_AVAILABLE
 	credentialWithIdentity:${1:(SecIdentityRef)identity} certificates:${2:(NSArray*)certArray} persistence:${3:(NSURLCredentialPersistence)persistence} NS_AVAILABLE(10_6, 3_0)
 snippet credentialWithUser:password:persistence:
 	credentialWithUser:${1:(NSString*)user} password:${2:(NSString*)password} persistence:${3:(NSURLCredentialPersistence)persistence}
+snippet currentCalendar
+	currentCalendar
 snippet currentCollation
 	currentCollation
 snippet currentDevice
 	currentDevice
 snippet currentHandler
 	currentHandler
+snippet currentInputMode
+	currentInputMode
 snippet currentLocale
 	currentLocale
 snippet currentQueueNS_AVAILABLE
@@ -188,6 +218,12 @@ snippet currentRunLoop
 	currentRunLoop
 snippet currentThread
 	currentThread
+snippet cyanColor
+	cyanColor
+snippet darkGrayColor
+	darkGrayColor
+snippet darkTextColor
+	darkTextColor
 snippet dashCheckingResultWithRange:replacementString:
 	dashCheckingResultWithRange:${1:(NSRange)range} replacementString:${2:(NSString*)replacementString}
 snippet dataDetectorWithTypes:error:
@@ -197,7 +233,7 @@ snippet dataFromPropertyList:format:errorDescription:
 snippet dataFromTXTRecordDictionary:
 	dataFromTXTRecordDictionary:${1:(NSDictionary*)txtDictionary}
 snippet dataWithBytes:length:
-	dataWithBytes:${1:(const} void*)bytes length:${2:(NSUInteger)length}
+	dataWithBytes:${1:(const void*)bytes} length:${2:(NSUInteger)length}
 snippet dataWithBytesNoCopy:length:
 	dataWithBytesNoCopy:${1:(void*)bytes} length:${2:(NSUInteger)length}
 snippet dataWithBytesNoCopy:length:freeWhenDone:
@@ -230,6 +266,8 @@ snippet dateWithTimeInterval:sinceDate:NS_AVAILABLE
 	dateWithTimeInterval:${1:(NSTimeInterval)ti} sinceDate:${2:(NSDate*)date} NS_AVAILABLE(10_4, 2_0)
 snippet dateWithTimeIntervalSince1970:
 	dateWithTimeIntervalSince1970:(NSTimeInterval)secs
+snippet dateWithTimeIntervalSinceNow:
+	dateWithTimeIntervalSinceNow:${1:(NSTimeInterval)secs}
 snippet dateWithTimeIntervalSinceReferenceDate:
 	dateWithTimeIntervalSinceReferenceDate:${1:(NSTimeInterval)secs}
 snippet decimalDigitCharacterSet
@@ -239,7 +277,7 @@ snippet decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverf
 snippet decimalNumberWithDecimal:
 	decimalNumberWithDecimal:${1:(NSDecimal)dcm}
 snippet decimalNumberWithMantissa:exponent:isNegative:
-	decimalNumberWithMantissa:${1:(unsigned} long long)mantissa exponent:${2:(short)exponent} isNegative:${3:(BOOL)flag}
+	decimalNumberWithMantissa:${1:(unsigned long long)mantissa} exponent:${2:(short)exponent} isNegative:${3:(BOOL)flag}
 snippet decimalNumberWithString:
 	decimalNumberWithString:${1:(NSString*)numberValue}
 snippet decimalNumberWithString:locale:
@@ -248,6 +286,8 @@ snippet decomposableCharacterSet
 	decomposableCharacterSet
 snippet defaultBehavior
 	defaultBehavior
+snippet defaultCStringEncoding
+	defaultCStringEncoding
 snippet defaultCenter
 	defaultCenter
 snippet defaultDecimalNumberHandler
@@ -296,6 +336,30 @@ snippet escapedTemplateForString:
 	escapedTemplateForString:${1:(NSString*)string}
 snippet exceptionWithName:reason:userInfo:
 	exceptionWithName:${1:(NSString*)name} reason:${2:(NSString*)reason} userInfo:${3:(NSDictionary*)userInfo}
+snippet expressionForAggregate:NS_AVAILABLE
+	expressionForAggregate:${1:(NSArray*)subexpressions} NS_AVAILABLE(10_5, 3_0)
+snippet expressionForBlock:arguments:NS_AVAILABLE
+	expressionForBlock:${1:(id(^)(id evaluatedObject, NSArray*expressions, NSMutableDictionary*context))block} arguments:${2:(NSArray*)arguments} NS_AVAILABLE(10_6, 4_0)
+snippet expressionForConstantValue:
+	expressionForConstantValue:${1:(id)obj}
+snippet expressionForEvaluatedObject
+	expressionForEvaluatedObject
+snippet expressionForFunction:arguments:
+	expressionForFunction:${1:(NSString*)name} arguments:${2:(NSArray*)parameters}
+snippet expressionForFunction:selectorName:arguments:NS_AVAILABLE
+	expressionForFunction:${1:(NSExpression*)target} selectorName:${2:(NSString*)name} arguments:${3:(NSArray*)parameters} NS_AVAILABLE(10_5, 3_0)
+snippet expressionForIntersectSet:with:NS_AVAILABLE
+	expressionForIntersectSet:${1:(NSExpression*)left} with:${2:(NSExpression*)right} NS_AVAILABLE(10_5, 3_0)
+snippet expressionForKeyPath:
+	expressionForKeyPath:${1:(NSString*)keyPath}
+snippet expressionForMinusSet:with:NS_AVAILABLE
+	expressionForMinusSet:${1:(NSExpression*)left} with:${2:(NSExpression*)right} NS_AVAILABLE(10_5, 3_0)
+snippet expressionForSubquery:usingIteratorVariable:predicate:NS_AVAILABLE
+	expressionForSubquery:${1:(NSExpression*)expression} usingIteratorVariable:${2:(NSString*)variable} predicate:${3:(id)predicate} NS_AVAILABLE(10_5, 3_0)
+snippet expressionForUnionSet:with:NS_AVAILABLE
+	expressionForUnionSet:${1:(NSExpression*)left} with:${2:(NSExpression*)right} NS_AVAILABLE(10_5, 3_0)
+snippet expressionForVariable:
+	expressionForVariable:${1:(NSString*)string}
 snippet familyNames
 	familyNames
 snippet fileHandleForReadingAtPath:
@@ -318,8 +382,10 @@ snippet fileHandleWithStandardInput
 	fileHandleWithStandardInput
 snippet fileHandleWithStandardOutput
 	fileHandleWithStandardOutput
+snippet fileURLWithPath:
+	fileURLWithPath:${1:(NSString*)path}
 snippet fileURLWithPath:isDirectory:NS_AVAILABLE
-	fileURLWithPath:${1:(NSString*)path} isDirectory:${2:(BOOL)} isDir NS_AVAILABLE(10_5, 2_0)
+	fileURLWithPath:${1:(NSString*)path} isDirectory:(BOOL) isDir NS_AVAILABLE(10_5, 2_0)
 snippet fileURLWithPathComponents:NS_AVAILABLE
 	fileURLWithPathComponents:${1:(NSArray*)components} NS_AVAILABLE(10_6, 4_0)
 snippet fontNamesForFamilyName:
@@ -332,12 +398,18 @@ snippet getStreamsToHost:port:inputStream:outputStream:
 	getStreamsToHost:${1:(NSHost*)host} port:${2:(NSInteger)port} inputStream:${3:(NSInputStream**)inputStream} outputStream:${4:(NSOutputStream**)outputStream}
 snippet grammarCheckingResultWithRange:details:
 	grammarCheckingResultWithRange:${1:(NSRange)range} details:${2:(NSArray*)details}
+snippet grayColor
+	grayColor
+snippet greenColor
+	greenColor
 snippet groupTableViewBackgroundColor
 	groupTableViewBackgroundColor
 snippet hasLearnedWord:
 	hasLearnedWord:${1:(NSString*)word}
 snippet illegalCharacterSet
 	illegalCharacterSet
+snippet imageNamed:
+	imageNamed:${1:(NSString*)name}
 snippet imageWithCGImage:
 	imageWithCGImage:${1:(CGImageRef)imageRef}
 snippet imageWithCGImage:scale:orientation:__OSX_AVAILABLE_STARTING
@@ -350,6 +422,8 @@ snippet indexPathForRow:inSection:
 	indexPathForRow:${1:(NSUInteger)row} inSection:${2:(NSUInteger)section}
 snippet indexPathWithIndex:
 	indexPathWithIndex:${1:(NSUInteger)index}
+snippet indexPathWithIndexes:length:
+	indexPathWithIndexes:${1:(NSUInteger*)indexes} length:${2:(NSUInteger)length}
 snippet indexSet
 	indexSet
 snippet indexSetWithIndex:
@@ -370,10 +444,22 @@ snippet instanceMethodSignatureForSelector:
 	instanceMethodSignatureForSelector:${1:(SEL)aSelector}
 snippet instancesRespondToSelector:
 	instancesRespondToSelector:${1:(SEL)aSelector}
+snippet interactionControllerWithURL:
+	interactionControllerWithURL:${1:(NSURL*)url}
 snippet invocationWithMethodSignature:
 	invocationWithMethodSignature:${1:(NSMethodSignature*)sig}
+snippet isCameraDeviceAvailable:__OSX_AVAILABLE_STARTING
+	isCameraDeviceAvailable:${1:(UIImagePickerControllerCameraDevice)cameraDevice}                   __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
+snippet isFlashAvailableForCameraDevice:__OSX_AVAILABLE_STARTING
+	isFlashAvailableForCameraDevice:${1:(UIImagePickerControllerCameraDevice)cameraDevice}           __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
+snippet isMainThread
+	isMainThread
 snippet isMultiThreaded
 	isMultiThreaded
+snippet isPrintingAvailable
+	isPrintingAvailable
+snippet isSourceTypeAvailable:
+	isSourceTypeAvailable:${1:(UIImagePickerControllerSourceType)sourceType}
 snippet isSubclassOfClass:NS_AVAILABLE
 	isSubclassOfClass:${1:(Class)aClass} NS_AVAILABLE(10_2, 2_0)
 snippet italicSystemFontOfSize:
@@ -384,10 +470,16 @@ snippet knownTimeZoneNames
 	knownTimeZoneNames
 snippet labelFontSize
 	labelFontSize
+snippet layerClass
+	layerClass
 snippet learnWord:
 	learnWord:${1:(NSString*)word}
 snippet letterCharacterSet
 	letterCharacterSet
+snippet lightGrayColor
+	lightGrayColor
+snippet lightTextColor
+	lightTextColor
 snippet lineDirectionForLanguage:NS_AVAILABLE
 	lineDirectionForLanguage:${1:(NSString*)isoLangCode} NS_AVAILABLE(10_6, 4_0)
 snippet linkCheckingResultWithRange:URL:
@@ -412,12 +504,16 @@ snippet localizedStringWithFormat:NS_FORMAT_FUNCTION
 	localizedStringWithFormat:${1:(NSString*)format,} ... NS_FORMAT_FUNCTION(1,2)
 snippet lowercaseLetterCharacterSet
 	lowercaseLetterCharacterSet
+snippet magentaColor
+	magentaColor
 snippet mainBundle
 	mainBundle
 snippet mainQueueNS_AVAILABLE
 	mainQueue NS_AVAILABLE(10_6, 4_0)
 snippet mainRunLoopNS_AVAILABLE
 	mainRunLoop NS_AVAILABLE(10_5, 2_0)
+snippet mainScreen
+	mainScreen
 snippet mainThread
 	mainThread
 snippet maximumDecimalNumber
@@ -457,23 +553,25 @@ snippet numberWithInteger:
 snippet numberWithLong:
 	numberWithLong:${1:(long)value}
 snippet numberWithLongLong:
-	numberWithLongLong:${1:(long} long)value
+	numberWithLongLong:${1:(long long)value}
 snippet numberWithShort:
 	numberWithShort:${1:(short)value}
 snippet numberWithUnsignedChar:
-	numberWithUnsignedChar:${1:(unsigned} char)value
+	numberWithUnsignedChar:${1:(unsigned char)value}
 snippet numberWithUnsignedInt:
-	numberWithUnsignedInt:${1:(unsigned} int)value
+	numberWithUnsignedInt:${1:(unsigned int)value}
 snippet numberWithUnsignedInteger:
 	numberWithUnsignedInteger:${1:(NSUInteger)value}
 snippet numberWithUnsignedLong:
-	numberWithUnsignedLong:${1:(unsigned} long)value
+	numberWithUnsignedLong:${1:(unsigned long)value}
 snippet numberWithUnsignedLongLong:
-	numberWithUnsignedLongLong:${1:(unsigned} long long)value
+	numberWithUnsignedLongLong:${1:(unsigned long long)value}
 snippet numberWithUnsignedShort:
-	numberWithUnsignedShort:${1:(unsigned} short)value
+	numberWithUnsignedShort:${1:(unsigned short)value}
 snippet orPredicateWithSubpredicates:
 	orPredicateWithSubpredicates:${1:(NSArray*)subpredicates}
+snippet orangeColor
+	orangeColor
 snippet orthographyCheckingResultWithRange:orthography:
 	orthographyCheckingResultWithRange:${1:(NSRange)range} orthography:${2:(NSOrthography*)orthography}
 snippet orthographyWithDominantScript:languageMap:
@@ -502,6 +600,10 @@ snippet portWithMachPort:
 	portWithMachPort:${1:(uint32_t)machPort}
 snippet portWithMachPort:options:NS_AVAILABLE
 	portWithMachPort:${1:(uint32_t)machPort} options:${2:(NSUInteger)f} NS_AVAILABLE(10_5, 2_0)
+snippet poseAsClass:NS_DEPRECATEDUNAVAILABLE_ATTRIBUTE
+	poseAsClass:${1:(Class)aClass} NS_DEPRECATED(10_0, 10_5, 2_0, 2_0)$/
+snippet predicateWithBlock:NS_AVAILABLE
+	predicateWithBlock:${1:(BOOL(^)(id evaluatedObject, NSDictionary*bindings))block} NS_AVAILABLE(10_6, 4_0)
 snippet predicateWithFormat:
 	predicateWithFormat:${1:(NSString*)predicateFormat,} ...
 snippet predicateWithFormat:argumentArray:
@@ -512,6 +614,8 @@ snippet predicateWithLeftExpression:rightExpression:customSelector:
 	predicateWithLeftExpression:${1:(NSExpression*)lhs} rightExpression:${2:(NSExpression*)rhs} customSelector:${3:(SEL)selector}
 snippet predicateWithLeftExpression:rightExpression:modifier:type:options:
 	predicateWithLeftExpression:${1:(NSExpression*)lhs} rightExpression:${2:(NSExpression*)rhs} modifier:${3:(NSComparisonPredicateModifier)modifier} type:${4:(NSPredicateOperatorType)type} options:${5:(NSUInteger)options}
+snippet predicateWithValue:
+	predicateWithValue:${1:(BOOL)value}
 snippet preferredLanguagesNS_AVAILABLE
 	preferredLanguages NS_AVAILABLE(10_5, 2_0)
 snippet preferredLocalizationsFromArray:
@@ -522,6 +626,10 @@ snippet printInfo
 	printInfo
 snippet printInfoWithDictionary:
 	printInfoWithDictionary:${1:(NSDictionary*)dictionary}
+snippet printableUTIs
+	printableUTIs
+snippet processInfo
+	processInfo
 snippet propertyForKey:inRequest:
 	propertyForKey:${1:(NSString*)key} inRequest:${2:(NSURLRequest*)request}
 snippet propertyList:isValidForFormat:
@@ -534,12 +642,16 @@ snippet propertyListWithStream:options:format:error:NS_AVAILABLE
 	propertyListWithStream:${1:(NSInputStream*)stream} options:${2:(NSPropertyListReadOptions)opt} format:${3:(NSPropertyListFormat*)format} error:${4:(NSError**)error} NS_AVAILABLE(10_6, 4_0)
 snippet punctuationCharacterSet
 	punctuationCharacterSet
+snippet purpleColor
+	purpleColor
 snippet quoteCheckingResultWithRange:replacementString:
 	quoteCheckingResultWithRange:${1:(NSRange)range} replacementString:${2:(NSString*)replacementString}
 snippet raise:format:NS_FORMAT_FUNCTION
 	raise:${1:(NSString*)name} format:${2:(NSString*)format,} ... NS_FORMAT_FUNCTION(2,3)
 snippet raise:format:arguments:NS_FORMAT_FUNCTION
 	raise:${1:(NSString*)name} format:${2:(NSString*)format} arguments:${3:(va_list)argList} NS_FORMAT_FUNCTION(2,0)
+snippet redColor
+	redColor
 snippet registerClass:
 	registerClass:${1:(Class)protocolClass}
 snippet regularExpressionCheckingResultWithRanges:count:regularExpression:NS_AVAILABLE
@@ -578,18 +690,44 @@ snippet scheduledTimerWithTimeInterval:invocation:repeats:
 	scheduledTimerWithTimeInterval:${1:(NSTimeInterval)ti} invocation:${2:(NSInvocation*)invocation} repeats:${3:(BOOL)yesOrNo}
 snippet scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:
 	scheduledTimerWithTimeInterval:${1:(NSTimeInterval)ti} target:${2:(id)aTarget} selector:${3:(SEL)aSelector} userInfo:${4:(id)userInfo} repeats:${5:(BOOL)yesOrNo}
+snippet screens__OSX_AVAILABLE_STARTING
+	screens __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_2)
 snippet scrollViewTexturedBackgroundColor__OSX_AVAILABLE_STARTING
 	scrollViewTexturedBackgroundColor __OSX_AVAILABLE_STARTING(__MAC_NA, __IPHONE_3_2)
 snippet sendSynchronousRequest:returningResponse:error:
 	sendSynchronousRequest:${1:(NSURLRequest*)request} returningResponse:${2:(NSURLResponse**)response} error:${3:(NSError**)error}
 snippet setAbbreviationDictionary:NS_AVAILABLE
 	setAbbreviationDictionary:${1:(NSDictionary*)dict} NS_AVAILABLE(10_6, 4_0)
+snippet setAnimationBeginsFromCurrentState:
+	setAnimationBeginsFromCurrentState:${1:(BOOL)fromCurrentState}
+snippet setAnimationCurve:
+	setAnimationCurve:${1:(UIViewAnimationCurve)curve}
+snippet setAnimationDelay:
+	setAnimationDelay:${1:(NSTimeInterval)delay}
+snippet setAnimationDelegate:
+	setAnimationDelegate:${1:(id)delegate}
+snippet setAnimationDidStopSelector:
+	setAnimationDidStopSelector:${1:(SEL)selector}
+snippet setAnimationDuration:
+	setAnimationDuration:${1:(NSTimeInterval)duration}
+snippet setAnimationRepeatAutoreverses:
+	setAnimationRepeatAutoreverses:${1:(BOOL)repeatAutoreverses}
+snippet setAnimationRepeatCount:
+	setAnimationRepeatCount:${1:(float)repeatCount}
+snippet setAnimationStartDate:
+	setAnimationStartDate:${1:(NSDate*)startDate}
+snippet setAnimationTransition:forView:cache:
+	setAnimationTransition:${1:(UIViewAnimationTransition)transition} forView:${2:(UIView*)view} cache:${3:(BOOL)cache}
+snippet setAnimationWillStartSelector:
+	setAnimationWillStartSelector:${1:(SEL)selector}
+snippet setAnimationsEnabled:
+	setAnimationsEnabled:${1:(BOOL)enabled}
 snippet setClass:forClassName:
 	setClass:${1:(Class)cls} forClassName:${2:(NSString*)codedName}
 snippet setClassName:forClass:
 	setClassName:${1:(NSString*)codedName} forClass:${2:(Class)cls}
 snippet setDefaultBehavior:
-	setDefaultBehavior:${1:(id} <NSDecimalNumberBehaviors>)behavior
+	setDefaultBehavior:${1:(id <NSDecimalNumberBehaviors>)behavior}
 snippet setDefaultFormatterBehavior:NS_AVAILABLE
 	setDefaultFormatterBehavior:${1:(NSDateFormatterBehavior)behavior} NS_AVAILABLE(10_4, 2_0)
 	setDefaultFormatterBehavior:${1:(NSNumberFormatterBehavior)behavior} NS_AVAILABLE(10_4, 2_0)
@@ -634,7 +772,7 @@ snippet sharedPrintController
 snippet sharedURLCache
 	sharedURLCache
 snippet signatureWithObjCTypes:
-	signatureWithObjCTypes:${1:(const} char*)types
+	signatureWithObjCTypes:${1:(const char*)types}
 snippet sleepForTimeInterval:
 	sleepForTimeInterval:${1:(NSTimeInterval)ti}
 snippet sleepUntilDate:
@@ -654,15 +792,15 @@ snippet standardUserDefaults
 snippet string
 	string
 snippet stringWithCString:NS_DEPRECATED
-	stringWithCString:${1:(const} char*)bytes NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
+	stringWithCString:${1:(const char*)bytes} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet stringWithCString:encoding:
-	stringWithCString:${1:(const} char*)cString encoding:${2:(NSStringEncoding)enc}
+	stringWithCString:${1:(const char*)cString} encoding:${2:(NSStringEncoding)enc}
 snippet stringWithCString:length:NS_DEPRECATED
-	stringWithCString:${1:(const} char*)bytes length:${2:(NSUInteger)length} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
+	stringWithCString:${1:(const char*)bytes} length:${2:(NSUInteger)length} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet stringWithCapacity:
 	stringWithCapacity:${1:(NSUInteger)capacity}
 snippet stringWithCharacters:length:
-	stringWithCharacters:${1:(const} unichar*)characters length:${2:(NSUInteger)length}
+	stringWithCharacters:${1:(const unichar*)characters} length:${2:(NSUInteger)length}
 snippet stringWithContentsOfFile:NS_DEPRECATED
 	stringWithContentsOfFile:${1:(NSString*)path} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet stringWithContentsOfFile:encoding:error:
@@ -680,7 +818,7 @@ snippet stringWithFormat:NS_FORMAT_FUNCTION
 snippet stringWithString:
 	stringWithString:${1:(NSString*)string}
 snippet stringWithUTF8String:
-	stringWithUTF8String:${1:(const} char*)nullTerminatedCString
+	stringWithUTF8String:${1:(const char*)nullTerminatedCString}
 snippet superclass
 	superclass
 snippet symbolCharacterSet
@@ -711,10 +849,14 @@ snippet timerWithTimeInterval:invocation:repeats:
 	timerWithTimeInterval:${1:(NSTimeInterval)ti} invocation:${2:(NSInvocation*)invocation} repeats:${3:(BOOL)yesOrNo}
 snippet timerWithTimeInterval:target:selector:userInfo:repeats:
 	timerWithTimeInterval:${1:(NSTimeInterval)ti} target:${2:(id)aTarget} selector:${3:(SEL)aSelector} userInfo:${4:(id)userInfo} repeats:${5:(BOOL)yesOrNo}
+snippet transformedValueClass
+	transformedValueClass
 snippet transitInformationCheckingResultWithRange:components:NS_AVAILABLE
 	transitInformationCheckingResultWithRange:${1:(NSRange)range} components:${2:(NSDictionary*)components} NS_AVAILABLE(NA, 4_0)
+snippet transitionFromView:toView:duration:options:completion:__OSX_AVAILABLE_STARTING
+	transitionFromView:${1:(UIView*)fromView} toView:${2:(UIView*)toView} duration:${3:(NSTimeInterval)duration} options:${4:(UIViewAnimationOptions)options} completion:${5:(void(^)(BOOL finished))completion} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet transitionWithView:duration:options:animations:completion:__OSX_AVAILABLE_STARTING
-	transitionWithView:${1:(UIView*)view} duration:${2:(NSTimeInterval)duration} options:${3:(UIViewAnimationOptions)options} animations:${4:(void(^)(void))animations} completion:${5:(void(^)(BOOL} finished))completion __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
+	transitionWithView:${1:(UIView*)view} duration:${2:(NSTimeInterval)duration} options:${3:(UIViewAnimationOptions)options} animations:${4:(void(^)(void))animations} completion:${5:(void(^)(BOOL finished))completion} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet unarchiveObjectWithData:
 	unarchiveObjectWithData:${1:(NSData*)data}
 snippet unarchiveObjectWithFile:
@@ -728,13 +870,13 @@ snippet uppercaseLetterCharacterSet
 snippet useStoredAccessorNS_DEPRECATED
 	useStoredAccessor NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet value:withObjCType:
-	value:${1:(const} void*)value withObjCType:${2:(const} char*)type
+	value:${1:(const void*)value} withObjCType:${2:(const char*)type}
 snippet valueTransformerForName:
 	valueTransformerForName:${1:(NSString*)name}
 snippet valueTransformerNames
 	valueTransformerNames
 snippet valueWithBytes:objCType:
-	valueWithBytes:${1:(const} void*)value objCType:${2:(const} char*)type
+	valueWithBytes:${1:(const void*)value} objCType:${2:(const char*)type}
 snippet valueWithCGAffineTransform:
 	valueWithCGAffineTransform:${1:(CGAffineTransform)transform}
 snippet valueWithCGPoint:
@@ -746,7 +888,7 @@ snippet valueWithCGSize:
 snippet valueWithNonretainedObject:
 	valueWithNonretainedObject:${1:(id)anObject}
 snippet valueWithPointer:
-	valueWithPointer:${1:(const} void*)pointer
+	valueWithPointer:${1:(const void*)pointer}
 snippet valueWithRange:
 	valueWithRange:${1:(NSRange)range}
 snippet valueWithUIEdgeInsets:
@@ -755,6 +897,8 @@ snippet version
 	version
 snippet viewFlipsideBackgroundColor
 	viewFlipsideBackgroundColor
+snippet whiteColor
+	whiteColor
 snippet whitespaceAndNewlineCharacterSet
 	whitespaceAndNewlineCharacterSet
 snippet whitespaceCharacterSet
@@ -765,6 +909,8 @@ snippet writeBookmarkData:toURL:options:error:
 	writeBookmarkData:${1:(NSData*)bookmarkData} toURL:${2:(NSURL*)bookmarkFileURL} options:${3:(NSURLBookmarkFileCreationOptions)options} error:${4:(NSError**)error}
 snippet writePropertyList:toStream:format:options:error:NS_AVAILABLE
 	writePropertyList:${1:(id)plist} toStream:${2:(NSOutputStream*)stream} format:${3:(NSPropertyListFormat)format} options:${4:(NSPropertyListWriteOptions)opt} error:${5:(NSError**)error} NS_AVAILABLE(10_6, 4_0)
+snippet yellowColor
+	yellowColor
 snippet AMSymbolNS_AVAILABLE
 	AMSymbol NS_AVAILABLE(10_4, 2_0)
 snippet CGAffineTransformValue
@@ -821,8 +967,8 @@ snippet URLForResource:withExtension:subdirectory:NS_AVAILABLE
 	URLForResource:${1:(NSString*)name} withExtension:${2:(NSString*)ext} subdirectory:${3:(NSString*)subpath} NS_AVAILABLE(10_6, 4_0)
 snippet URLForResource:withExtension:subdirectory:localization:NS_AVAILABLE
 	URLForResource:${1:(NSString*)name} withExtension:${2:(NSString*)ext} subdirectory:${3:(NSString*)subpath} localization:${4:(NSString*)localizationName} NS_AVAILABLE(10_6, 4_0)
-snippet -URLHandleUsingCache:NS_DEPRECATED
-	-URLHandleUsingCache:NS_DEPRECATED
+snippet URLHandleUsingCache:NS_DEPRECATED
+	URLHandleUsingCache:${1:(BOOL)shouldUseCache} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet URLProtocol:cachedResponseIsValid:
 	URLProtocol:${1:(NSURLProtocol*)protocol} cachedResponseIsValid:${2:(NSCachedURLResponse*)cachedResponse}
 snippet URLProtocol:didCancelAuthenticationChallenge:
@@ -849,18 +995,18 @@ snippet URLsForResourcesWithExtension:subdirectory:NS_AVAILABLE
 	URLsForResourcesWithExtension:${1:(NSString*)ext} subdirectory:${2:(NSString*)subpath} NS_AVAILABLE(10_6, 4_0)
 snippet URLsForResourcesWithExtension:subdirectory:localization:NS_AVAILABLE
 	URLsForResourcesWithExtension:${1:(NSString*)ext} subdirectory:${2:(NSString*)subpath} localization:${3:(NSString*)localizationName} NS_AVAILABLE(10_6, 4_0)
-snippet -UTF8String
-	-UTF8String
+snippet UTF8String
+	UTF8String
 snippet abbreviation
 	abbreviation
 snippet abbreviationForDate:
 	abbreviationForDate:${1:(NSDate*)aDate}
-snippet -abortParsing
-	-abortParsing
+snippet abortParsing
+	abortParsing
 snippet absoluteString
 	absoluteString
-snippet -absoluteURL
-	-absoluteURL
+snippet absoluteURL
+	absoluteURL
 snippet accelerometer:didAccelerate:
 	accelerometer:${1:(UIAccelerometer*)accelerometer} didAccelerate:${2:(UIAcceleration*)acceleration}
 snippet acceptConnectionInBackgroundAndNotify
@@ -887,14 +1033,14 @@ snippet accessibilityScroll:__OSX_AVAILABLE_STARTING
 	accessibilityScroll:${1:(UIAccessibilityScrollDirection)direction} __OSX_AVAILABLE_STARTING(__MAC_NA, __IPHONE_4_2)
 snippet actionSheet:clickedButtonAtIndex:
 	actionSheet:${1:(UIActionSheet*)actionSheet} clickedButtonAtIndex:${2:(NSInteger)buttonIndex}
-snippet -actionSheet:didDismissWithButtonIndex:
-	-actionSheet:didDismissWithButtonIndex:
-snippet -actionSheet:willDismissWithButtonIndex:
-	-actionSheet:willDismissWithButtonIndex:
+snippet actionSheet:didDismissWithButtonIndex:
+	actionSheet:${1:(UIActionSheet*)actionSheet} didDismissWithButtonIndex:${2:(NSInteger)buttonIndex}
+snippet actionSheet:willDismissWithButtonIndex:
+	actionSheet:${1:(UIActionSheet*)actionSheet} willDismissWithButtonIndex:${2:(NSInteger)buttonIndex}
 snippet actionSheetCancel:
 	actionSheetCancel:${1:(UIActionSheet*)actionSheet}
-snippet -actionsForTarget:forControlEvent:
-	-actionsForTarget:forControlEvent:
+snippet actionsForTarget:forControlEvent:
+	actionsForTarget:${1:(id)target} forControlEvent:${2:(UIControlEvents)controlEvent}
 snippet activeProcessorCountNS_AVAILABLE
 	activeProcessorCount NS_AVAILABLE(10_5, 2_0)
 snippet addArcWithCenter:radius:startAngle:endAngle:clockwise:__OSX_AVAILABLE_STARTING
@@ -903,8 +1049,8 @@ snippet addAttribute:value:range:
 	addAttribute:${1:(NSString*)name} value:${2:(id)value} range:${3:(NSRange)range}
 snippet addAttributes:range:
 	addAttributes:${1:(NSDictionary*)attrs} range:${2:(NSRange)range}
-snippet -addButtonWithTitle:
-	-addButtonWithTitle:
+snippet addButtonWithTitle:
+	addButtonWithTitle:${1:(NSString*)title}
 snippet addCharactersInRange:
 	addCharactersInRange:${1:(NSRange)aRange}
 snippet addCharactersInString:
@@ -971,8 +1117,8 @@ snippet addSuiteNamed:
 	addSuiteNamed:${1:(NSString*)suiteName}
 snippet addSymbolicLinkWithDestination:preferredFilename:
 	addSymbolicLinkWithDestination:${1:(NSString*)path} preferredFilename:${2:(NSString*)filename}
-snippet -addTarget:action:
-	-addTarget:action:
+snippet addTarget:action:
+	addTarget:${1:(id)target} action:${2:(SEL)action}
 snippet addTarget:action:forControlEvents:
 	addTarget:${1:(id)target} action:${2:(SEL)action} forControlEvents:${3:(UIControlEvents)controlEvents}
 snippet addTimeInterval:NS_DEPRECATED
@@ -987,14 +1133,14 @@ snippet addresses
 	addresses
 snippet alertView:clickedButtonAtIndex:
 	alertView:${1:(UIAlertView*)alertView} clickedButtonAtIndex:${2:(NSInteger)buttonIndex}
-snippet -alertView:didDismissWithButtonIndex:
-	-alertView:didDismissWithButtonIndex:
-snippet -alertView:willDismissWithButtonIndex:
-	-alertView:willDismissWithButtonIndex:
+snippet alertView:didDismissWithButtonIndex:
+	alertView:${1:(UIAlertView*)alertView} didDismissWithButtonIndex:${2:(NSInteger)buttonIndex}
+snippet alertView:willDismissWithButtonIndex:
+	alertView:${1:(UIAlertView*)alertView} willDismissWithButtonIndex:${2:(NSInteger)buttonIndex}
 snippet alertViewCancel:
 	alertViewCancel:${1:(UIAlertView*)alertView}
-snippet -allControlEvents
-	-allControlEvents
+snippet allControlEvents
+	allControlEvents
 snippet allCredentials
 	allCredentials
 snippet allHTTPHeaderFields
@@ -1003,12 +1149,12 @@ snippet allHeaderFields
 	allHeaderFields
 snippet allKeys
 	allKeys
-snippet -allKeysForObject:
-	-allKeysForObject:
+snippet allKeysForObject:
+	allKeysForObject:${1:(id)anObject}
 snippet allObjects
 	allObjects
-snippet -allTargets
-	-allTargets
+snippet allTargets
+	allTargets
 snippet allTouches
 	allTouches
 snippet allValues
@@ -1026,7 +1172,7 @@ snippet anyObject
 snippet appendAttributedString:
 	appendAttributedString:${1:(NSAttributedString*)attrString}
 snippet appendBytes:length:
-	appendBytes:${1:(const} void*)bytes length:${2:(NSUInteger)length}
+	appendBytes:${1:(const void*)bytes} length:${2:(NSUInteger)length}
 snippet appendData:
 	appendData:${1:(NSData*)other}
 snippet appendFormat:NS_FORMAT_FUNCTION
@@ -1049,12 +1195,12 @@ snippet application:didReceiveRemoteNotification:__OSX_AVAILABLE_STARTING
 	application:${1:(UIApplication*)application} didReceiveRemoteNotification:${2:(NSDictionary*)userInfo} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet application:didRegisterForRemoteNotificationsWithDeviceToken:__OSX_AVAILABLE_STARTING
 	application:${1:(UIApplication*)application} didRegisterForRemoteNotificationsWithDeviceToken:${2:(NSData*)deviceToken} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
-snippet -application:handleOpenURL:
-	-application:handleOpenURL:
-snippet -application:openURL:sourceApplication:annotation:__OSX_AVAILABLE_STARTING
-	-application:openURL:sourceApplication:annotation:__OSX_AVAILABLE_STARTING
-snippet -application:willChangeStatusBarFrame:
-	-application:willChangeStatusBarFrame:
+snippet application:handleOpenURL:
+	application:${1:(UIApplication*)application} handleOpenURL:${2:(NSURL*)url}
+snippet application:openURL:sourceApplication:annotation:__OSX_AVAILABLE_STARTING
+	application:${1:(UIApplication*)application} openURL:${2:(NSURL*)url} sourceApplication:${3:(NSString*)sourceApplication} annotation:${4:(id)annotation} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_2)
+snippet application:willChangeStatusBarFrame:
+	application:${1:(UIApplication*)application} willChangeStatusBarFrame:${2:(CGRect)newStatusBarFrame}
 snippet application:willChangeStatusBarOrientation:duration:
 	application:${1:(UIApplication*)application} willChangeStatusBarOrientation:${2:(UIInterfaceOrientation)newStatusBarOrientation} duration:${3:(NSTimeInterval)duration}
 snippet applicationDidBecomeActive:
@@ -1063,14 +1209,14 @@ snippet applicationDidEnterBackground:__OSX_AVAILABLE_STARTING
 	applicationDidEnterBackground:${1:(UIApplication*)application} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet applicationDidFinishLaunching:
 	applicationDidFinishLaunching:${1:(UIApplication*)application}
-snippet -applicationDidReceiveMemoryWarning:
-	-applicationDidReceiveMemoryWarning:
+snippet applicationDidReceiveMemoryWarning:
+	applicationDidReceiveMemoryWarning:${1:(UIApplication*)application}
 snippet applicationProtectedDataDidBecomeAvailable:__OSX_AVAILABLE_STARTING
 	applicationProtectedDataDidBecomeAvailable:${1:(UIApplication*)application}    __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet applicationProtectedDataWillBecomeUnavailable:__OSX_AVAILABLE_STARTING
 	applicationProtectedDataWillBecomeUnavailable:${1:(UIApplication*)application} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
-snippet -applicationSignificantTimeChange:
-	-applicationSignificantTimeChange:
+snippet applicationSignificantTimeChange:
+	applicationSignificantTimeChange:${1:(UIApplication*)application}
 snippet applicationWillEnterForeground:__OSX_AVAILABLE_STARTING
 	applicationWillEnterForeground:${1:(UIApplication*)application} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet applicationWillResignActive:
@@ -1089,8 +1235,6 @@ snippet archiverDidFinish:
 	archiverDidFinish:${1:(NSKeyedArchiver*)archiver}
 snippet archiverWillFinish:
 	archiverWillFinish:${1:(NSKeyedArchiver*)archiver}
-snippet -arguments
-	-arguments
 snippet arguments
 	arguments
 snippet argumentsRetained
@@ -1145,42 +1289,40 @@ snippet backgroundImageForState:
 	backgroundImageForState:${1:(UIControlState)state}
 snippet backgroundRectForBounds:
 	backgroundRectForBounds:${1:(CGRect)bounds}
-snippet -baseURL
-	-baseURL
+snippet baseURL
+	baseURL
 snippet baseWritingDirectionForPosition:inDirection:
 	baseWritingDirectionForPosition:${1:(UITextPosition*)position} inDirection:${2:(UITextStorageDirection)direction}
 snippet becomeFirstResponder
 	becomeFirstResponder
-snippet -becomeKeyWindow
-	-becomeKeyWindow
+snippet becomeKeyWindow
+	becomeKeyWindow
 snippet beginBackgroundTaskWithExpirationHandler:__OSX_AVAILABLE_STARTING
 	beginBackgroundTaskWithExpirationHandler:${1:(void(^)(void))handler}  __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet beginContentAccess
 	beginContentAccess
-snippet -beginCustomizingItems:
-	-beginCustomizingItems:
+snippet beginCustomizingItems:
+	beginCustomizingItems:${1:(NSArray*)items}
 snippet beginEditing
 	beginEditing
-snippet -beginGeneratingDeviceOrientationNotifications
-	-beginGeneratingDeviceOrientationNotifications
-snippet -beginIgnoringInteractionEvents
-	-beginIgnoringInteractionEvents
+snippet beginGeneratingDeviceOrientationNotifications
+	beginGeneratingDeviceOrientationNotifications
+snippet beginIgnoringInteractionEvents
+	beginIgnoringInteractionEvents
 snippet beginReceivingRemoteControlEvents__OSX_AVAILABLE_STARTING
 	beginReceivingRemoteControlEvents __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet beginTrackingWithTouch:withEvent:
 	beginTrackingWithTouch:${1:(UITouch*)touch} withEvent:${2:(UIEvent*)event}
 snippet beginUndoGrouping
 	beginUndoGrouping
-snippet -beginUpdates
-	-beginUpdates
+snippet beginUpdates
+	beginUpdates
 snippet bitmapRepresentation
 	bitmapRepresentation
 snippet bookmarkDataWithOptions:includingResourceValuesForKeys:relativeToURL:error:NS_AVAILABLE
 	bookmarkDataWithOptions:${1:(NSURLBookmarkCreationOptions)options} includingResourceValuesForKeys:${2:(NSArray*)keys} relativeToURL:${3:(NSURL*)relativeURL} error:${4:(NSError**)error} NS_AVAILABLE(10_6, 4_0)
 snippet boolForKey:
 	boolForKey:${1:(NSString*)defaultName}
-snippet -boolValue
-	-boolValue
 snippet boolValue
 	boolValue
 snippet borderRectForBounds:
@@ -1205,8 +1347,8 @@ snippet cStringLengthNS_DEPRECATED
 	cStringLength NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet cStringNS_DEPRECATED
 	cString NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
-snippet -cStringUsingEncoding:
-	-cStringUsingEncoding:
+snippet cStringUsingEncoding:
+	cStringUsingEncoding:${1:(NSStringEncoding)encoding}
 snippet cache:willEvictObject:
 	cache:${1:(NSCache*)cache} willEvictObject:${2:(id)obj}
 snippet cachePolicy
@@ -1226,8 +1368,8 @@ snippet canBeConvertedToEncoding:
 	canBeConvertedToEncoding:${1:(NSStringEncoding)encoding}
 snippet canBePreventedByGestureRecognizer:
 	canBePreventedByGestureRecognizer:${1:(UIGestureRecognizer*)preventingGestureRecognizer}
-snippet -canBecomeFirstResponder
-	-canBecomeFirstResponder
+snippet canBecomeFirstResponder
+	canBecomeFirstResponder
 snippet canOpenURL:__OSX_AVAILABLE_STARTING
 	canOpenURL:${1:(NSURL*)url} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet canPerformAction:withSender:__OSX_AVAILABLE_STARTING
@@ -1236,8 +1378,8 @@ snippet canPreventGestureRecognizer:
 	canPreventGestureRecognizer:${1:(UIGestureRecognizer*)preventedGestureRecognizer}
 snippet canRedo
 	canRedo
-snippet -canResignFirstResponder
-	-canResignFirstResponder
+snippet canResignFirstResponder
+	canResignFirstResponder
 snippet canUndo
 	canUndo
 snippet cancel
@@ -1254,8 +1396,8 @@ snippet cancelPerformSelector:target:argument:
 	cancelPerformSelector:${1:(SEL)aSelector} target:${2:(id)target} argument:${3:(id)arg}
 snippet cancelPerformSelectorsWithTarget:
 	cancelPerformSelectorsWithTarget:${1:(id)target}
-snippet -cancelTrackingWithEvent:
-	-cancelTrackingWithEvent:
+snippet cancelTrackingWithEvent:
+	cancelTrackingWithEvent:${1:(UIEvent*)event}
 snippet capitalizedString
 	capitalizedString
 snippet caretRectForPosition:
@@ -1264,8 +1406,8 @@ snippet caseInsensitiveCompare:
 	caseInsensitiveCompare:${1:(NSString*)string}
 snippet caseSensitive
 	caseSensitive
-snippet -cellForRowAtIndexPath:
-	-cellForRowAtIndexPath:
+snippet cellForRowAtIndexPath:
+	cellForRowAtIndexPath:${1:(NSIndexPath*)indexPath}
 snippet certificatesNS_AVAILABLE
 	certificates NS_AVAILABLE(10_6, 3_0)
 snippet changeCurrentDirectoryPath:
@@ -1325,18 +1467,17 @@ snippet comparatorNS_AVAILABLE
 snippet compare:
 	compare:${1:(NSDate*)other}
 	compare:${1:(NSNumber*)decimalNumber}
-snippet -compare:
-	-compare:
+	compare:${1:(NSIndexPath*)otherObject}
 	compare:${1:(NSString*)string}
 	compare:${1:(NSNumber*)otherNumber}
 snippet compare:options:
 	compare:${1:(NSString*)string} options:${2:(NSStringCompareOptions)mask}
 snippet compare:options:range:
 	compare:${1:(NSString*)string} options:${2:(NSStringCompareOptions)mask} range:${3:(NSRange)compareRange}
-snippet -compare:options:range:locale:
-	-compare:options:range:locale:
-snippet -compareObject:toObject:
-	-compareObject:toObject:
+snippet compare:options:range:locale:
+	compare:${1:(NSString*)string} options:${2:(NSStringCompareOptions)mask} range:${3:(NSRange)compareRange} locale:${4:(id)locale}
+snippet compareObject:toObject:
+	compareObject:${1:(id)object1} toObject:${2:(id)object2}
 snippet comparePosition:toPosition:
 	comparePosition:${1:(UITextPosition*)position} toPosition:${2:(UITextPosition*)other}
 snippet comparisonPredicateModifier
@@ -1402,8 +1543,8 @@ snippet containsObject:
 	containsObject:${1:(id)anObject}
 snippet containsPasteboardTypes:
 	containsPasteboardTypes:${1:(NSArray*)pasteboardTypes}
-snippet -containsPasteboardTypes:inItemSet:
-	-containsPasteboardTypes:inItemSet:
+snippet containsPasteboardTypes:inItemSet:
+	containsPasteboardTypes:${1:(NSArray*)pasteboardTypes} inItemSet:${2:(NSIndexSet*)itemSet}
 snippet containsPoint:
 	containsPoint:${1:(CGPoint)point}
 snippet containsValueForKey:
@@ -1426,12 +1567,12 @@ snippet continueWithoutCredentialForAuthenticationChallenge:
 	continueWithoutCredentialForAuthenticationChallenge:${1:(NSURLAuthenticationChallenge*)challenge}
 snippet convertPoint:fromView:
 	convertPoint:${1:(CGPoint)point} fromView:${2:(UIView*)view}
-snippet -convertPoint:fromWindow:
-	-convertPoint:fromWindow:
+snippet convertPoint:fromWindow:
+	convertPoint:${1:(CGPoint)point} fromWindow:${2:(UIWindow*)window}
 snippet convertPoint:toView:
 	convertPoint:${1:(CGPoint)point} toView:${2:(UIView*)view}
-snippet -convertPoint:toWindow:
-	-convertPoint:toWindow:
+snippet convertPoint:toWindow:
+	convertPoint:${1:(CGPoint)point} toWindow:${2:(UIWindow*)window}
 snippet convertRect:fromView:
 	convertRect:${1:(CGRect)rect} fromView:${2:(UIView*)view}
 snippet convertRect:fromWindow:
@@ -1458,8 +1599,8 @@ snippet countByEnumeratingWithState:objects:count:
 	countByEnumeratingWithState:${1:(NSFastEnumerationState*)state} objects:${2:(id*)stackbuf} count:${3:(NSUInteger)len}
 snippet countForObject:
 	countForObject:${1:(id)object}
-snippet -countLimit
-	-countLimit
+snippet countLimit
+	countLimit
 snippet countOfIndexesInRange:
 	countOfIndexesInRange:${1:(NSRange)range}
 snippet createDirectoryAtPath:attributes:NS_DEPRECATED
@@ -1500,10 +1641,10 @@ snippet dataForPasteboardType:
 	dataForPasteboardType:${1:(NSString*)pasteboardType}
 snippet dataForPasteboardType:inItemSet:
 	dataForPasteboardType:${1:(NSString*)pasteboardType} inItemSet:${2:(NSIndexSet*)itemSet}
-snippet -dataUsingEncoding:
-	-dataUsingEncoding:
-snippet -dataUsingEncoding:allowLossyConversion:
-	-dataUsingEncoding:allowLossyConversion:
+snippet dataUsingEncoding:
+	dataUsingEncoding:${1:(NSStringEncoding)encoding}
+snippet dataUsingEncoding:allowLossyConversion:
+	dataUsingEncoding:${1:(NSStringEncoding)encoding} allowLossyConversion:${2:(BOOL)lossy}
 snippet dateByAddingComponents:toDate:options:
 	dateByAddingComponents:${1:(NSDateComponents*)comps} toDate:${2:(NSDate*)date} options:${3:(NSUInteger)opts}
 snippet dateByAddingTimeInterval:NS_AVAILABLE
@@ -1520,46 +1661,46 @@ snippet dateStyleNS_AVAILABLE
 	dateStyle NS_AVAILABLE(10_4, 2_0)
 snippet daylightSavingTimeOffsetForDate:NS_AVAILABLE
 	daylightSavingTimeOffsetForDate:${1:(NSDate*)aDate} NS_AVAILABLE(10_5, 2_0)
-snippet -daylightSavingTimeOffsetNS_AVAILABLE
-	-daylightSavingTimeOffsetNS_AVAILABLE
+snippet daylightSavingTimeOffsetNS_AVAILABLE
+	daylightSavingTimeOffset NS_AVAILABLE(10_5, 2_0)
 snippet dealloc
 	dealloc
 snippet decimalNumberByAdding:
 	decimalNumberByAdding:${1:(NSDecimalNumber*)decimalNumber}
 snippet decimalNumberByAdding:withBehavior:
-	decimalNumberByAdding:${1:(NSDecimalNumber*)decimalNumber} withBehavior:${2:(id} <NSDecimalNumberBehaviors>)behavior
+	decimalNumberByAdding:${1:(NSDecimalNumber*)decimalNumber} withBehavior:${2:(id <NSDecimalNumberBehaviors>)behavior}
 snippet decimalNumberByDividingBy:
 	decimalNumberByDividingBy:${1:(NSDecimalNumber*)decimalNumber}
 snippet decimalNumberByDividingBy:withBehavior:
-	decimalNumberByDividingBy:${1:(NSDecimalNumber*)decimalNumber} withBehavior:${2:(id} <NSDecimalNumberBehaviors>)behavior
+	decimalNumberByDividingBy:${1:(NSDecimalNumber*)decimalNumber} withBehavior:${2:(id <NSDecimalNumberBehaviors>)behavior}
 snippet decimalNumberByMultiplyingBy:
 	decimalNumberByMultiplyingBy:${1:(NSDecimalNumber*)decimalNumber}
 snippet decimalNumberByMultiplyingBy:withBehavior:
-	decimalNumberByMultiplyingBy:${1:(NSDecimalNumber*)decimalNumber} withBehavior:${2:(id} <NSDecimalNumberBehaviors>)behavior
+	decimalNumberByMultiplyingBy:${1:(NSDecimalNumber*)decimalNumber} withBehavior:${2:(id <NSDecimalNumberBehaviors>)behavior}
 snippet decimalNumberByMultiplyingByPowerOf10:
 	decimalNumberByMultiplyingByPowerOf10:(short)power
 snippet decimalNumberByMultiplyingByPowerOf10:withBehavior:
-	decimalNumberByMultiplyingByPowerOf10:(short)power withBehavior:${1:(id} <NSDecimalNumberBehaviors>)behavior
+	decimalNumberByMultiplyingByPowerOf10:(short)power withBehavior:${1:(id <NSDecimalNumberBehaviors>)behavior}
 snippet decimalNumberByRaisingToPower:
 	decimalNumberByRaisingToPower:${1:(NSUInteger)power}
 snippet decimalNumberByRaisingToPower:withBehavior:
-	decimalNumberByRaisingToPower:${1:(NSUInteger)power} withBehavior:${2:(id} <NSDecimalNumberBehaviors>)behavior
+	decimalNumberByRaisingToPower:${1:(NSUInteger)power} withBehavior:${2:(id <NSDecimalNumberBehaviors>)behavior}
 snippet decimalNumberByRoundingAccordingToBehavior:
-	decimalNumberByRoundingAccordingToBehavior:${1:(id} <NSDecimalNumberBehaviors>)behavior
+	decimalNumberByRoundingAccordingToBehavior:${1:(id <NSDecimalNumberBehaviors>)behavior}
 snippet decimalNumberBySubtracting:
 	decimalNumberBySubtracting:${1:(NSDecimalNumber*)decimalNumber}
 snippet decimalNumberBySubtracting:withBehavior:
-	decimalNumberBySubtracting:${1:(NSDecimalNumber*)decimalNumber} withBehavior:${2:(id} <NSDecimalNumberBehaviors>)behavior
+	decimalNumberBySubtracting:${1:(NSDecimalNumber*)decimalNumber} withBehavior:${2:(id <NSDecimalNumberBehaviors>)behavior}
 snippet decimalSeparator
 	decimalSeparator
 snippet decimalValue
 	decimalValue
 snippet decodeArrayOfObjCType:count:at:
-	decodeArrayOfObjCType:${1:(const} char*)itemType count:${2:(NSUInteger)count} at:${3:(void*)array}
+	decodeArrayOfObjCType:${1:(const char*)itemType} count:${2:(NSUInteger)count} at:${3:(void*)array}
 snippet decodeBoolForKey:
 	decodeBoolForKey:${1:(NSString*)key}
-snippet -decodeBytesForKey:returnedLength:
-	-decodeBytesForKey:returnedLength:
+snippet decodeBytesForKey:returnedLength:
+	decodeBytesForKey:${1:(NSString*)key} returnedLength:${2:(NSUInteger*)lengthp}
 snippet decodeBytesWithReturnedLength:
 	decodeBytesWithReturnedLength:${1:(NSUInteger*)lengthp}
 snippet decodeCGAffineTransformForKey:
@@ -1582,8 +1723,6 @@ snippet decodeInt64ForKey:
 	decodeInt64ForKey:${1:(NSString*)key}
 snippet decodeIntForKey:
 	decodeIntForKey:${1:(NSString*)key}
-snippet -decodeIntForKey:
-	-decodeIntForKey:
 snippet decodeIntegerForKey:
 	decodeIntegerForKey:${1:(NSString*)key}
 snippet decodeNXObjectNS_DEPRECATED
@@ -1597,9 +1736,9 @@ snippet decodePropertyList
 snippet decodeUIEdgeInsetsForKey:
 	decodeUIEdgeInsetsForKey:${1:(NSString*)key}
 snippet decodeValueOfObjCType:at:
-	decodeValueOfObjCType:${1:(const} char*)type at:${2:(void*)data}
+	decodeValueOfObjCType:${1:(const char*)type} at:${2:(void*)data}
 snippet decodeValuesOfObjCTypes:
-	decodeValuesOfObjCTypes:${1:(const} char*)types, ...
+	decodeValuesOfObjCTypes:${1:(const char*)types,} ...
 snippet decomposedStringWithCanonicalMapping
 	decomposedStringWithCanonicalMapping
 snippet decomposedStringWithCompatibilityMapping
@@ -1626,8 +1765,8 @@ snippet dependencies
 	dependencies
 snippet dequeueNotificationsMatching:coalesceMask:
 	dequeueNotificationsMatching:${1:(NSNotification*)notification} coalesceMask:${2:(NSUInteger)coalesceMask}
-snippet -dequeueReusableCellWithIdentifier:
-	-dequeueReusableCellWithIdentifier:
+snippet dequeueReusableCellWithIdentifier:
+	dequeueReusableCellWithIdentifier:${1:(NSString*)identifier}
 snippet descriptionInStringsFileFormat
 	descriptionInStringsFileFormat
 snippet descriptionWithLocale:
@@ -1648,8 +1787,8 @@ snippet dictionaryWithValuesForKeys:NS_AVAILABLE
 	dictionaryWithValuesForKeys:${1:(NSArray*)keys} NS_AVAILABLE(10_3, 2_0)
 snippet didAddSubview:
 	didAddSubview:${1:(UIView*)subview}
-snippet -didAnimateFirstHalfOfRotationToInterfaceOrientation:
-	-didAnimateFirstHalfOfRotationToInterfaceOrientation:
+snippet didAnimateFirstHalfOfRotationToInterfaceOrientation:
+	didAnimateFirstHalfOfRotationToInterfaceOrientation:${1:(UIInterfaceOrientation)toInterfaceOrientation}
 snippet didChange:valuesAtIndexes:forKey:
 	didChange:${1:(NSKeyValueChange)changeKind} valuesAtIndexes:${2:(NSIndexSet*)indexes} forKey:${3:(NSString*)key}
 snippet didChangeValueForKey:
@@ -1660,12 +1799,12 @@ snippet didMoveToSuperview
 	didMoveToSuperview
 snippet didMoveToWindow
 	didMoveToWindow
-snippet -didPresentActionSheet:
-	-didPresentActionSheet:
-snippet -didPresentAlertView:
-	-didPresentAlertView:
-snippet -didReceiveMemoryWarning
-	-didReceiveMemoryWarning
+snippet didPresentActionSheet:
+	didPresentActionSheet:${1:(UIActionSheet*)actionSheet}
+snippet didPresentAlertView:
+	didPresentAlertView:${1:(UIAlertView*)alertView}
+snippet didReceiveMemoryWarning
+	didReceiveMemoryWarning
 snippet didRotateFromInterfaceOrientation:
 	didRotateFromInterfaceOrientation:${1:(UIInterfaceOrientation)fromInterfaceOrientation}
 snippet didTransitionToState:__OSX_AVAILABLE_STARTING
@@ -1688,8 +1827,8 @@ snippet dismissAnimated:
 	dismissAnimated:${1:(BOOL)animated}
 snippet dismissMenuAnimated:
 	dismissMenuAnimated:${1:(BOOL)animated}
-snippet -dismissModalViewControllerAnimated:
-	-dismissModalViewControllerAnimated:
+snippet dismissModalViewControllerAnimated:
+	dismissModalViewControllerAnimated:${1:(BOOL)animated}
 snippet dismissPopoverAnimated:
 	dismissPopoverAnimated:${1:(BOOL)animated}
 snippet dismissPreviewAnimated:
@@ -1710,8 +1849,8 @@ snippet documentInteractionController:didEndSendingToApplication:
 	documentInteractionController:${1:(UIDocumentInteractionController*)controller} didEndSendingToApplication:${2:(NSString*)application}
 snippet documentInteractionController:performAction:
 	documentInteractionController:${1:(UIDocumentInteractionController*)controller} performAction:${2:(SEL)action}
-snippet -documentInteractionController:willBeginSendingToApplication:
-	-documentInteractionController:willBeginSendingToApplication:
+snippet documentInteractionController:willBeginSendingToApplication:
+	documentInteractionController:${1:(UIDocumentInteractionController*)controller} willBeginSendingToApplication:${2:(NSString*)application}
 snippet documentInteractionControllerDidDismissOpenInMenu:
 	documentInteractionControllerDidDismissOpenInMenu:${1:(UIDocumentInteractionController*)controller}
 snippet documentInteractionControllerDidDismissOptionsMenu:
@@ -1742,54 +1881,54 @@ snippet doubleForKey:
 	doubleForKey:${1:(NSString*)defaultName}
 snippet doubleValue
 	doubleValue
-snippet -drawAsPatternInRect:
-	-drawAsPatternInRect:
-snippet -drawAtPoint:
-	-drawAtPoint:
+snippet drawAsPatternInRect:
+	drawAsPatternInRect:${1:(CGRect)rect}
+snippet drawAtPoint:
+	drawAtPoint:${1:(CGPoint)point}
 snippet drawAtPoint:blendMode:alpha:
 	drawAtPoint:${1:(CGPoint)point} blendMode:${2:(CGBlendMode)blendMode} alpha:${3:(CGFloat)alpha}
-snippet -drawAtPoint:forWidth:withFont:fontSize:lineBreakMode:baselineAdjustment:
-	-drawAtPoint:forWidth:withFont:fontSize:lineBreakMode:baselineAdjustment:
+snippet drawAtPoint:forWidth:withFont:fontSize:lineBreakMode:baselineAdjustment:
+	drawAtPoint:${1:(CGPoint)point} forWidth:${2:(CGFloat)width} withFont:${3:(UIFont*)font} fontSize:${4:(CGFloat)fontSize} lineBreakMode:${5:(UILineBreakMode)lineBreakMode} baselineAdjustment:${6:(UIBaselineAdjustment)baselineAdjustment}
 snippet drawAtPoint:forWidth:withFont:lineBreakMode:
 	drawAtPoint:${1:(CGPoint)point} forWidth:${2:(CGFloat)width} withFont:${3:(UIFont*)font} lineBreakMode:${4:(UILineBreakMode)lineBreakMode}
-snippet -drawAtPoint:forWidth:withFont:minFontSize:actualFontSize:lineBreakMode:baselineAdjustment:
-	-drawAtPoint:forWidth:withFont:minFontSize:actualFontSize:lineBreakMode:baselineAdjustment:
-snippet -drawAtPoint:withFont:
-	-drawAtPoint:withFont:
-snippet -drawContentForPageAtIndex:inRect:
-	-drawContentForPageAtIndex:inRect:
-snippet -drawFooterForPageAtIndex:inRect:
-	-drawFooterForPageAtIndex:inRect:
-snippet -drawHeaderForPageAtIndex:inRect:
-	-drawHeaderForPageAtIndex:inRect:
-snippet -drawInRect:
-	-drawInRect:
+snippet drawAtPoint:forWidth:withFont:minFontSize:actualFontSize:lineBreakMode:baselineAdjustment:
+	drawAtPoint:${1:(CGPoint)point} forWidth:${2:(CGFloat)width} withFont:${3:(UIFont*)font} minFontSize:${4:(CGFloat)minFontSize} actualFontSize:${5:(CGFloat*)actualFontSize} lineBreakMode:${6:(UILineBreakMode)lineBreakMode} baselineAdjustment:${7:(UIBaselineAdjustment)baselineAdjustment}
+snippet drawAtPoint:withFont:
+	drawAtPoint:${1:(CGPoint)point} withFont:${2:(UIFont*)font}
+snippet drawContentForPageAtIndex:inRect:
+	drawContentForPageAtIndex:${1:(NSInteger)pageIndex} inRect:${2:(CGRect)contentRect}
+snippet drawFooterForPageAtIndex:inRect:
+	drawFooterForPageAtIndex:${1:(NSInteger)pageIndex}  inRect:${2:(CGRect)footerRect}
+snippet drawHeaderForPageAtIndex:inRect:
+	drawHeaderForPageAtIndex:${1:(NSInteger)pageIndex}  inRect:${2:(CGRect)headerRect}
+snippet drawInRect:
+	drawInRect:${1:(CGRect)rect}
 snippet drawInRect:blendMode:alpha:
 	drawInRect:${1:(CGRect)rect} blendMode:${2:(CGBlendMode)blendMode} alpha:${3:(CGFloat)alpha}
-snippet -drawInRect:forPageAtIndex:
-	-drawInRect:forPageAtIndex:
-snippet -drawInRect:withFont:
-	-drawInRect:withFont:
-snippet -drawInRect:withFont:lineBreakMode:
-	-drawInRect:withFont:lineBreakMode:
+snippet drawInRect:forPageAtIndex:
+	drawInRect:${1:(CGRect)rect} forPageAtIndex:${2:(NSInteger)pageIndex}
+snippet drawInRect:withFont:
+	drawInRect:${1:(CGRect)rect} withFont:${2:(UIFont*)font}
+snippet drawInRect:withFont:lineBreakMode:
+	drawInRect:${1:(CGRect)rect} withFont:${2:(UIFont*)font} lineBreakMode:${3:(UILineBreakMode)lineBreakMode}
 snippet drawInRect:withFont:lineBreakMode:alignment:
 	drawInRect:${1:(CGRect)rect} withFont:${2:(UIFont*)font} lineBreakMode:${3:(UILineBreakMode)lineBreakMode} alignment:${4:(UITextAlignment)alignment}
-snippet -drawPageAtIndex:inRect:
-	-drawPageAtIndex:inRect:
+snippet drawPageAtIndex:inRect:
+	drawPageAtIndex:${1:(NSInteger)pageIndex} inRect:${2:(CGRect)printableRect}
 snippet drawPlaceholderInRect:
 	drawPlaceholderInRect:${1:(CGRect)rect}
-snippet -drawPrintFormatter:forPageAtIndex:
-	-drawPrintFormatter:forPageAtIndex:
+snippet drawPrintFormatter:forPageAtIndex:
+	drawPrintFormatter:${1:(UIPrintFormatter*)printFormatter} forPageAtIndex:${2:(NSInteger)pageIndex}
 snippet drawRect:
 	drawRect:${1:(CGRect)rect}
-snippet -drawRect:forViewPrintFormatter:
-	-drawRect:forViewPrintFormatter:
+snippet drawRect:forViewPrintFormatter:
+	drawRect:${1:(CGRect)rect} forViewPrintFormatter:${2:(UIViewPrintFormatter*)formatter}
 snippet drawTextInRect:
 	drawTextInRect:${1:(CGRect)rect}
 snippet earlierDate:
 	earlierDate:${1:(NSDate*)anotherDate}
-snippet -editButtonItem
-	-editButtonItem
+snippet editButtonItem
+	editButtonItem
 snippet editingRectForBounds:
 	editingRectForBounds:${1:(CGRect)bounds}
 snippet editingStringForObjectValue:
@@ -1801,7 +1940,7 @@ snippet enableUndoRegistration
 snippet enabledRemoteNotificationTypes__OSX_AVAILABLE_STARTING
 	enabledRemoteNotificationTypes __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet encodeArrayOfObjCType:count:at:
-	encodeArrayOfObjCType:${1:(const} char*)type count:${2:(NSUInteger)count} at:${3:(const} void*)array
+	encodeArrayOfObjCType:${1:(const char*)type} count:${2:(NSUInteger)count} at:${3:(const void*)array}
 snippet encodeBool:forKey:
 	encodeBool:${1:(BOOL)boolv} forKey:${2:(NSString*)key}
 snippet encodeBycopyObject:
@@ -1809,9 +1948,9 @@ snippet encodeBycopyObject:
 snippet encodeByrefObject:
 	encodeByrefObject:${1:(id)anObject}
 snippet encodeBytes:length:
-	encodeBytes:${1:(const} void*)byteaddr length:${2:(NSUInteger)length}
+	encodeBytes:${1:(const void*)byteaddr} length:${2:(NSUInteger)length}
 snippet encodeBytes:length:forKey:
-	encodeBytes:${1:(const} uint8_t*)bytesp length:${2:(NSUInteger)lenv} forKey:${3:(NSString*)key}
+	encodeBytes:${1:(const uint8_t*)bytesp} length:${2:(NSUInteger)lenv} forKey:${3:(NSString*)key}
 snippet encodeCGAffineTransform:forKey:
 	encodeCGAffineTransform:${1:(CGAffineTransform)transform} forKey:${2:(NSString*)key}
 snippet encodeCGPoint:forKey:
@@ -1836,8 +1975,6 @@ snippet encodeInt64:forKey:
 	encodeInt64:(int64_t)intv forKey:${1:(NSString*)key}
 snippet encodeInt:forKey:
 	encodeInt:${1:(int)intv} forKey:${2:(NSString*)key}
-snippet -encodeInt:forKey:
-	-encodeInt:forKey:
 snippet encodeInteger:forKey:
 	encodeInteger:${1:(NSInteger)intv} forKey:${2:(NSString*)key}
 snippet encodeNXObject:NS_DEPRECATED
@@ -1853,21 +1990,21 @@ snippet encodeRootObject:
 snippet encodeUIEdgeInsets:forKey:
 	encodeUIEdgeInsets:${1:(UIEdgeInsets)insets} forKey:${2:(NSString*)key}
 snippet encodeValueOfObjCType:at:
-	encodeValueOfObjCType:${1:(const} char*)type at:${2:(const} void*)addr
+	encodeValueOfObjCType:${1:(const char*)type} at:${2:(const void*)addr}
 snippet encodeValuesOfObjCTypes:
-	encodeValuesOfObjCTypes:${1:(const} char*)types, ...
+	encodeValuesOfObjCTypes:${1:(const char*)types,} ...
 snippet encodeWithCoder:
 	encodeWithCoder:${1:(NSCoder*)aCoder}
 snippet endBackgroundTask:__OSX_AVAILABLE_STARTING
 	endBackgroundTask:${1:(UIBackgroundTaskIdentifier)identifier} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet endContentAccess
 	endContentAccess
-snippet -endCustomizingAnimated:
-	-endCustomizingAnimated:
+snippet endCustomizingAnimated:
+	endCustomizingAnimated:${1:(BOOL)animated}
 snippet endEditing
 	endEditing
-snippet -endEditing:
-	-endEditing:
+snippet endEditing:
+	endEditing:${1:(BOOL)force}
 snippet endGeneratingDeviceOrientationNotifications
 	endGeneratingDeviceOrientationNotifications
 snippet endIgnoringInteractionEvents
@@ -1878,52 +2015,52 @@ snippet endTrackingWithTouch:withEvent:
 	endTrackingWithTouch:${1:(UITouch*)touch} withEvent:${2:(UIEvent*)event}
 snippet endUndoGrouping
 	endUndoGrouping
-snippet -endUpdates
-	-endUpdates
+snippet endUpdates
+	endUpdates
 snippet enqueueNotification:postingStyle:
 	enqueueNotification:${1:(NSNotification*)notification} postingStyle:${2:(NSPostingStyle)postingStyle}
 snippet enqueueNotification:postingStyle:coalesceMask:forModes:
 	enqueueNotification:${1:(NSNotification*)notification} postingStyle:${2:(NSPostingStyle)postingStyle} coalesceMask:${3:(NSUInteger)coalesceMask} forModes:${4:(NSArray*)modes}
 snippet enumerateAttribute:inRange:options:usingBlock:NS_AVAILABLE
-	enumerateAttribute:${1:(NSString*)attrName} inRange:${2:(NSRange)enumerationRange} options:${3:(NSAttributedStringEnumerationOptions)opts} usingBlock:${4:(void(^)(id} value, NSRange range, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateAttribute:${1:(NSString*)attrName} inRange:${2:(NSRange)enumerationRange} options:${3:(NSAttributedStringEnumerationOptions)opts} usingBlock:${4:(void(^)(id value, NSRange range, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateAttributesInRange:options:usingBlock:NS_AVAILABLE
-	enumerateAttributesInRange:${1:(NSRange)enumerationRange} options:${2:(NSAttributedStringEnumerationOptions)opts} usingBlock:${3:(void(^)(NSDictionary*attrs,} NSRange range, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateAttributesInRange:${1:(NSRange)enumerationRange} options:${2:(NSAttributedStringEnumerationOptions)opts} usingBlock:${3:(void(^)(NSDictionary*attrs, NSRange range, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateIndexesInRange:options:usingBlock:NS_AVAILABLE
-	enumerateIndexesInRange:${1:(NSRange)range} options:${2:(NSEnumerationOptions)opts} usingBlock:${3:(void(^)(NSUInteger} idx, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateIndexesInRange:${1:(NSRange)range} options:${2:(NSEnumerationOptions)opts} usingBlock:${3:(void(^)(NSUInteger idx, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateIndexesUsingBlock:NS_AVAILABLE
-	enumerateIndexesUsingBlock:${1:(void(^)(NSUInteger} idx, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateIndexesUsingBlock:${1:(void(^)(NSUInteger idx, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateIndexesWithOptions:usingBlock:NS_AVAILABLE
-	enumerateIndexesWithOptions:${1:(NSEnumerationOptions)opts} usingBlock:${2:(void(^)(NSUInteger} idx, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateIndexesWithOptions:${1:(NSEnumerationOptions)opts} usingBlock:${2:(void(^)(NSUInteger idx, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateKeysAndObjectsUsingBlock:NS_AVAILABLE
-	enumerateKeysAndObjectsUsingBlock:${1:(void(^)(id} key, id obj, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateKeysAndObjectsUsingBlock:${1:(void(^)(id key, id obj, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateKeysAndObjectsWithOptions:usingBlock:NS_AVAILABLE
-	enumerateKeysAndObjectsWithOptions:${1:(NSEnumerationOptions)opts} usingBlock:${2:(void(^)(id} key, id obj, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateKeysAndObjectsWithOptions:${1:(NSEnumerationOptions)opts} usingBlock:${2:(void(^)(id key, id obj, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateLinesUsingBlock:NS_AVAILABLE
-	enumerateLinesUsingBlock:${1:(void(^)(NSString*line,} BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateLinesUsingBlock:${1:(void(^)(NSString*line, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateMatchesInString:options:range:usingBlock:
-	enumerateMatchesInString:${1:(NSString*)string} options:${2:(NSMatchingOptions)options} range:${3:(NSRange)range} usingBlock:${4:(void(^)(NSTextCheckingResult*result,} NSMatchingFlags flags, BOOL*stop))block
+	enumerateMatchesInString:${1:(NSString*)string} options:${2:(NSMatchingOptions)options} range:${3:(NSRange)range} usingBlock:${4:(void(^)(NSTextCheckingResult*result, NSMatchingFlags flags, BOOL*stop))block}
 snippet enumerateObjectsAtIndexes:options:usingBlock:NS_AVAILABLE
-	enumerateObjectsAtIndexes:${1:(NSIndexSet*)s} options:${2:(NSEnumerationOptions)opts} usingBlock:${3:(void(^)(id} obj, NSUInteger idx, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateObjectsAtIndexes:${1:(NSIndexSet*)s} options:${2:(NSEnumerationOptions)opts} usingBlock:${3:(void(^)(id obj, NSUInteger idx, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateObjectsUsingBlock:NS_AVAILABLE
-	enumerateObjectsUsingBlock:${1:(void(^)(id} obj, NSUInteger idx, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
-	enumerateObjectsUsingBlock:${1:(void(^)(id} obj, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateObjectsUsingBlock:${1:(void(^)(id obj, NSUInteger idx, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
+	enumerateObjectsUsingBlock:${1:(void(^)(id obj, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateObjectsWithOptions:usingBlock:NS_AVAILABLE
-	enumerateObjectsWithOptions:${1:(NSEnumerationOptions)opts} usingBlock:${2:(void(^)(id} obj, NSUInteger idx, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
-	enumerateObjectsWithOptions:${1:(NSEnumerationOptions)opts} usingBlock:${2:(void(^)(id} obj, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateObjectsWithOptions:${1:(NSEnumerationOptions)opts} usingBlock:${2:(void(^)(id obj, NSUInteger idx, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
+	enumerateObjectsWithOptions:${1:(NSEnumerationOptions)opts} usingBlock:${2:(void(^)(id obj, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumerateSubstringsInRange:options:usingBlock:NS_AVAILABLE
-	enumerateSubstringsInRange:${1:(NSRange)range} options:${2:(NSStringEnumerationOptions)opts} usingBlock:${3:(void(^)(NSString*substring,} NSRange substringRange, NSRange enclosingRange, BOOL*stop))block NS_AVAILABLE(10_6, 4_0)
+	enumerateSubstringsInRange:${1:(NSRange)range} options:${2:(NSStringEnumerationOptions)opts} usingBlock:${3:(void(^)(NSString*substring, NSRange substringRange, NSRange enclosingRange, BOOL*stop))block} NS_AVAILABLE(10_6, 4_0)
 snippet enumeratorAtPath:
 	enumeratorAtPath:${1:(NSString*)path}
 snippet enumeratorAtURL:includingPropertiesForKeys:options:errorHandler:NS_AVAILABLE
-	enumeratorAtURL:${1:(NSURL*)url} includingPropertiesForKeys:${2:(NSArray*)keys} options:${3:(NSDirectoryEnumerationOptions)mask} errorHandler:${4:(BOOL(^)(NSURL*url,} NSError*error))handler NS_AVAILABLE(10_6, 4_0)
+	enumeratorAtURL:${1:(NSURL*)url} includingPropertiesForKeys:${2:(NSArray*)keys} options:${3:(NSDirectoryEnumerationOptions)mask} errorHandler:${4:(BOOL(^)(NSURL*url, NSError*error))handler} NS_AVAILABLE(10_6, 4_0)
 snippet environment
 	environment
 snippet eraSymbolsNS_AVAILABLE
 	eraSymbols NS_AVAILABLE(10_4, 2_0)
-snippet -evaluateWithObject:
-	-evaluateWithObject:
-snippet -evaluateWithObject:substitutionVariables:NS_AVAILABLE
-	-evaluateWithObject:substitutionVariables:NS_AVAILABLE
+snippet evaluateWithObject:
+	evaluateWithObject:${1:(id)object}
+snippet evaluateWithObject:substitutionVariables:NS_AVAILABLE
+	evaluateWithObject:${1:(id)object} substitutionVariables:${2:(NSDictionary*)bindings} NS_AVAILABLE(10_5, 3_0)
 snippet evictsObjectsWithDiscardedContent
 	evictsObjectsWithDiscardedContent
 snippet exceptionDuringOperation:error:leftOperand:rightOperand:
@@ -1954,8 +2091,8 @@ snippet expressionValueWithObject:context:
 	expressionValueWithObject:${1:(id)object} context:${2:(NSMutableDictionary*)context}
 snippet failureResponse
 	failureResponse
-snippet -fastestEncoding
-	-fastestEncoding
+snippet fastestEncoding
+	fastestEncoding
 snippet fileAttributes
 	fileAttributes
 snippet fileAttributesAtPath:traverseLink:NS_DEPRECATED
@@ -2054,14 +2191,14 @@ snippet filename
 	filename
 snippet fillWithBlendMode:alpha:
 	fillWithBlendMode:${1:(CGBlendMode)blendMode} alpha:${2:(CGFloat)alpha}
-snippet -filterUsingPredicate:
-	-filterUsingPredicate:
-snippet -filterUsingPredicate:NS_AVAILABLE
-	-filterUsingPredicate:NS_AVAILABLE
-snippet -filteredArrayUsingPredicate:
-	-filteredArrayUsingPredicate:
-snippet -filteredSetUsingPredicate:NS_AVAILABLE
-	-filteredSetUsingPredicate:NS_AVAILABLE
+snippet filterUsingPredicate:
+	filterUsingPredicate:${1:(NSPredicate*)predicate}
+snippet filterUsingPredicate:NS_AVAILABLE
+	filterUsingPredicate:${1:(NSPredicate*)predicate} NS_AVAILABLE(10_5, 3_0)
+snippet filteredArrayUsingPredicate:
+	filteredArrayUsingPredicate:${1:(NSPredicate*)predicate}
+snippet filteredSetUsingPredicate:NS_AVAILABLE
+	filteredSetUsingPredicate:${1:(NSPredicate*)predicate} NS_AVAILABLE(10_5, 3_0)
 snippet finalize
 	finalize
 snippet finalizeNS_AVAILABLE
@@ -2082,8 +2219,8 @@ snippet firstRectForRange:
 	firstRectForRange:${1:(UITextRange*)range}
 snippet firstWeekday
 	firstWeekday
-snippet -flashScrollIndicators
-	-flashScrollIndicators
+snippet flashScrollIndicators
+	flashScrollIndicators
 snippet floatForKey:
 	floatForKey:${1:(NSString*)defaultName}
 snippet floatValue
@@ -2139,10 +2276,10 @@ snippet getCFRunLoop
 	getCFRunLoop
 snippet getCString:NS_DEPRECATED
 	getCString:${1:(char*)bytes} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
-snippet -getCString:maxLength:NS_DEPRECATED
-	-getCString:maxLength:NS_DEPRECATED
-snippet -getCString:maxLength:encoding:
-	-getCString:maxLength:encoding:
+snippet getCString:maxLength:NS_DEPRECATED
+	getCString:${1:(char*)bytes} maxLength:${2:(NSUInteger)maxLength} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
+snippet getCString:maxLength:encoding:
+	getCString:${1:(char*)buffer} maxLength:${2:(NSUInteger)maxBufferCount} encoding:${3:(NSStringEncoding)encoding}
 snippet getCString:maxLength:range:remainingRange:NS_DEPRECATED
 	getCString:${1:(char*)bytes} maxLength:${2:(NSUInteger)maxLength} range:${3:(NSRange)aRange} remainingRange:${4:(NSRangePointer)leftoverRange} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet getCharacters:
@@ -2162,9 +2299,9 @@ snippet getLineDash:count:phase:
 snippet getLineStart:end:contentsEnd:forRange:
 	getLineStart:${1:(NSUInteger*)startPtr} end:${2:(NSUInteger*)lineEndPtr} contentsEnd:${3:(NSUInteger*)contentsEndPtr} forRange:${4:(NSRange)range}
 snippet getObjectValue:forString:errorDescription:
-	getObjectValue:${1:(out} id*)obj forString:${2:(NSString*)string} errorDescription:${3:(out} NSString**)error
+	getObjectValue:${1:(out id*)obj} forString:${2:(NSString*)string} errorDescription:${3:(out NSString**)error}
 snippet getObjectValue:forString:range:error:NS_AVAILABLE
-	getObjectValue:${1:(out} id*)obj forString:${2:(NSString*)string} range:${3:(inout} NSRange*)rangep error:${4:(out} NSError**)error NS_AVAILABLE(10_4, 2_0)
+	getObjectValue:${1:(out id*)obj} forString:${2:(NSString*)string} range:${3:(inout NSRange*)rangep} error:${4:(out NSError**)error} NS_AVAILABLE(10_4, 2_0)
 snippet getObjects:
 	getObjects:${1:(id*)objects}
 snippet getObjects:andKeys:
@@ -2227,14 +2364,14 @@ snippet hasThousandSeparators
 	hasThousandSeparators
 snippet helpAnchor
 	helpAnchor
-snippet -hitTest:withEvent:
-	-hitTest:withEvent:
+snippet hitTest:withEvent:
+	hitTest:${1:(CGPoint)point} withEvent:${2:(UIEvent*)event}
 snippet hostName
 	hostName
 snippet identity
 	identity
-snippet -ignoreTouch:forEvent:
-	-ignoreTouch:forEvent:
+snippet ignoreTouch:forEvent:
+	ignoreTouch:${1:(UITouch*)touch} forEvent:${2:(UIEvent*)event}
 snippet ignoreWord:
 	ignoreWord:${1:(NSString*)wordToIgnore}
 snippet ignoredWords
@@ -2260,7 +2397,7 @@ snippet indexGreaterThanIndex:
 snippet indexGreaterThanOrEqualToIndex:
 	indexGreaterThanOrEqualToIndex:${1:(NSUInteger)value}
 snippet indexInRange:options:passingTest:NS_AVAILABLE
-	indexInRange:${1:(NSRange)range} options:${2:(NSEnumerationOptions)opts} passingTest:${3:(BOOL(^)(NSUInteger} idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexInRange:${1:(NSRange)range} options:${2:(NSEnumerationOptions)opts} passingTest:${3:(BOOL(^)(NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexLessThanIndex:
 	indexLessThanIndex:${1:(NSUInteger)value}
 snippet indexLessThanOrEqualToIndex:
@@ -2271,56 +2408,56 @@ snippet indexOfObject:
 	indexOfObject:${1:(id)anObject}
 snippet indexOfObject:inRange:
 	indexOfObject:${1:(id)anObject} inRange:${2:(NSRange)range}
-snippet -indexOfObject:inSortedRange:options:usingComparator:NS_AVAILABLE
-	-indexOfObject:inSortedRange:options:usingComparator:NS_AVAILABLE
+snippet indexOfObject:inSortedRange:options:usingComparator:NS_AVAILABLE
+	indexOfObject:${1:(id)obj} inSortedRange:${2:(NSRange)r} options:${3:(NSBinarySearchingOptions)opts} usingComparator:${4:(NSComparator)cmp} NS_AVAILABLE(10_6, 4_0)
 snippet indexOfObjectAtIndexes:options:passingTest:NS_AVAILABLE
-	indexOfObjectAtIndexes:${1:(NSIndexSet*)s} options:${2:(NSEnumerationOptions)opts} passingTest:${3:(BOOL(^)(id} obj, NSUInteger idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexOfObjectAtIndexes:${1:(NSIndexSet*)s} options:${2:(NSEnumerationOptions)opts} passingTest:${3:(BOOL(^)(id obj, NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexOfObjectIdenticalTo:
 	indexOfObjectIdenticalTo:${1:(id)anObject}
 snippet indexOfObjectIdenticalTo:inRange:
 	indexOfObjectIdenticalTo:${1:(id)anObject} inRange:${2:(NSRange)range}
 snippet indexOfObjectPassingTest:NS_AVAILABLE
-	indexOfObjectPassingTest:${1:(BOOL(^)(id} obj, NSUInteger idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexOfObjectPassingTest:${1:(BOOL(^)(id obj, NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexOfObjectWithOptions:passingTest:NS_AVAILABLE
-	indexOfObjectWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(id} obj, NSUInteger idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexOfObjectWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(id obj, NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexPassingTest:NS_AVAILABLE
-	indexPassingTest:${1:(BOOL(^)(NSUInteger} idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexPassingTest:${1:(BOOL(^)(NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexPathByAddingIndex:
 	indexPathByAddingIndex:${1:(NSUInteger)index}
 snippet indexPathByRemovingLastIndex
 	indexPathByRemovingLastIndex
-snippet -indexPathForCell:
-	-indexPathForCell:
-snippet -indexPathForRowAtPoint:
-	-indexPathForRowAtPoint:
-snippet -indexPathForSelectedRow
-	-indexPathForSelectedRow
-snippet -indexPathsForRowsInRect:
-	-indexPathsForRowsInRect:
+snippet indexPathForCell:
+	indexPathForCell:${1:(UITableViewCell*)cell}
+snippet indexPathForRowAtPoint:
+	indexPathForRowAtPoint:${1:(CGPoint)point}
+snippet indexPathForSelectedRow
+	indexPathForSelectedRow
+snippet indexPathsForRowsInRect:
+	indexPathsForRowsInRect:${1:(CGRect)rect}
 snippet indexPathsForVisibleRows
 	indexPathsForVisibleRows
 snippet indexWithOptions:passingTest:NS_AVAILABLE
-	indexWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(NSUInteger} idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexesInRange:options:passingTest:NS_AVAILABLE
-	indexesInRange:${1:(NSRange)range} options:${2:(NSEnumerationOptions)opts} passingTest:${3:(BOOL(^)(NSUInteger} idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexesInRange:${1:(NSRange)range} options:${2:(NSEnumerationOptions)opts} passingTest:${3:(BOOL(^)(NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexesOfObjectsAtIndexes:options:passingTest:NS_AVAILABLE
-	indexesOfObjectsAtIndexes:${1:(NSIndexSet*)s} options:${2:(NSEnumerationOptions)opts} passingTest:${3:(BOOL(^)(id} obj, NSUInteger idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexesOfObjectsAtIndexes:${1:(NSIndexSet*)s} options:${2:(NSEnumerationOptions)opts} passingTest:${3:(BOOL(^)(id obj, NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexesOfObjectsPassingTest:NS_AVAILABLE
-	indexesOfObjectsPassingTest:${1:(BOOL(^)(id} obj, NSUInteger idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexesOfObjectsPassingTest:${1:(BOOL(^)(id obj, NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexesOfObjectsWithOptions:passingTest:NS_AVAILABLE
-	indexesOfObjectsWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(id} obj, NSUInteger idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexesOfObjectsWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(id obj, NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexesPassingTest:NS_AVAILABLE
-	indexesPassingTest:${1:(BOOL(^)(NSUInteger} idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexesPassingTest:${1:(BOOL(^)(NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet indexesWithOptions:passingTest:NS_AVAILABLE
-	indexesWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(NSUInteger} idx, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	indexesWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(NSUInteger idx, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet infoDictionary
 	infoDictionary
 snippet initByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error:NS_AVAILABLE
 	initByResolvingBookmarkData:${1:(NSData*)bookmarkData} options:${2:(NSURLBookmarkResolutionOptions)options} relativeToURL:${3:(NSURL*)relativeURL} bookmarkDataIsStale:${4:(BOOL*)isStale} error:${5:(NSError**)error} NS_AVAILABLE(10_6, 4_0)
 snippet initDirectoryWithFileWrappers:
 	initDirectoryWithFileWrappers:${1:(NSDictionary*)childrenByPreferredName}
-snippet -initFileURLWithPath:
-	-initFileURLWithPath:
+snippet initFileURLWithPath:
+	initFileURLWithPath:${1:(NSString*)path}
 snippet initFileURLWithPath:isDirectory:NS_AVAILABLE
 	initFileURLWithPath:${1:(NSString*)path} isDirectory:${2:(BOOL)isDir} NS_AVAILABLE(10_5, 2_0)
 snippet initForReadingWithData:
@@ -2332,7 +2469,7 @@ snippet initRegularFileWithContents:
 snippet initRemoteWithProtocolFamily:socketType:protocol:address:
 	initRemoteWithProtocolFamily:${1:(int)family} socketType:${2:(int)type} protocol:${3:(int)protocol} address:${4:(NSData*)address}
 snippet initRemoteWithTCPPort:host:
-	initRemoteWithTCPPort:${1:(unsigned} short)port host:${2:(NSString*)hostName}
+	initRemoteWithTCPPort:${1:(unsigned short)port} host:${2:(NSString*)hostName}
 snippet initSymbolicLinkWithDestination:
 	initSymbolicLinkWithDestination:${1:(NSString*)path}
 snippet initSymbolicLinkWithDestinationURL:NS_AVAILABLE
@@ -2345,8 +2482,8 @@ snippet initToMemory
 	initToMemory
 snippet initWithAccessibilityContainer:
 	initWithAccessibilityContainer:${1:(id)container}
-snippet -initWithActivityIndicatorStyle:
-	-initWithActivityIndicatorStyle:
+snippet initWithActivityIndicatorStyle:
+	initWithActivityIndicatorStyle:${1:(UIActivityIndicatorViewStyle)style}
 snippet initWithArray:
 	initWithArray:${1:(NSArray*)array}
 snippet initWithArray:copyItems:NS_AVAILABLE
@@ -2360,15 +2497,15 @@ snippet initWithBarButtonSystemItem:target:action:
 snippet initWithBool:
 	initWithBool:${1:(BOOL)value}
 snippet initWithBytes:length:
-	initWithBytes:${1:(const} void*)bytes length:${2:(NSUInteger)length}
+	initWithBytes:${1:(const void*)bytes} length:${2:(NSUInteger)length}
 snippet initWithBytes:length:encoding:
-	initWithBytes:${1:(const} void*)bytes length:${2:(NSUInteger)len} encoding:${3:(NSStringEncoding)encoding}
+	initWithBytes:${1:(const void*)bytes} length:${2:(NSUInteger)len} encoding:${3:(NSStringEncoding)encoding}
 snippet initWithBytes:objCType:
-	initWithBytes:${1:(const} void*)value objCType:${2:(const} char*)type
+	initWithBytes:${1:(const void*)value} objCType:${2:(const char*)type}
 snippet initWithBytesNoCopy:length:
 	initWithBytesNoCopy:${1:(void*)bytes} length:${2:(NSUInteger)length}
-snippet -initWithBytesNoCopy:length:encoding:freeWhenDone:
-	-initWithBytesNoCopy:length:encoding:freeWhenDone:
+snippet initWithBytesNoCopy:length:encoding:freeWhenDone:
+	initWithBytesNoCopy:${1:(void*)bytes} length:${2:(NSUInteger)len} encoding:${3:(NSStringEncoding)encoding} freeWhenDone:${4:(BOOL)freeBuffer}
 snippet initWithBytesNoCopy:length:freeWhenDone:
 	initWithBytesNoCopy:${1:(void*)bytes} length:${2:(NSUInteger)length} freeWhenDone:${3:(BOOL)b}
 snippet initWithCGColor:
@@ -2377,12 +2514,12 @@ snippet initWithCGImage:
 	initWithCGImage:${1:(CGImageRef)imageRef}
 snippet initWithCGImage:scale:orientation:__OSX_AVAILABLE_STARTING
 	initWithCGImage:${1:(CGImageRef)imageRef} scale:${2:(CGFloat)scale} orientation:${3:(UIImageOrientation)orientation} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
-snippet -initWithCString:NS_DEPRECATED
-	-initWithCString:NS_DEPRECATED
+snippet initWithCString:NS_DEPRECATED
+	initWithCString:${1:(const char*)bytes} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet initWithCString:encoding:
-	initWithCString:${1:(const} char*)nullTerminatedCString encoding:${2:(NSStringEncoding)encoding}
+	initWithCString:${1:(const char*)nullTerminatedCString} encoding:${2:(NSStringEncoding)encoding}
 snippet initWithCString:length:NS_DEPRECATED
-	initWithCString:${1:(const} char*)bytes length:${2:(NSUInteger)length} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
+	initWithCString:${1:(const char*)bytes} length:${2:(NSUInteger)length} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet initWithCStringNoCopy:length:freeWhenDone:NS_DEPRECATED
 	initWithCStringNoCopy:${1:(char*)bytes} length:${2:(NSUInteger)length} freeWhenDone:${3:(BOOL)freeBuffer} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet initWithCalendarIdentifier:
@@ -2390,14 +2527,12 @@ snippet initWithCalendarIdentifier:
 snippet initWithCapacity:
 	initWithCapacity:${1:(NSUInteger)numItems}
 	initWithCapacity:${1:(NSUInteger)capacity}
-snippet -initWithCapacity:
-	-initWithCapacity:
 snippet initWithChar:
 	initWithChar:${1:(char)value}
 snippet initWithCharacters:length:
-	initWithCharacters:${1:(const} unichar*)characters length:${2:(NSUInteger)length}
-snippet -initWithCharactersNoCopy:length:freeWhenDone:
-	-initWithCharactersNoCopy:length:freeWhenDone:
+	initWithCharacters:${1:(const unichar*)characters} length:${2:(NSUInteger)length}
+snippet initWithCharactersNoCopy:length:freeWhenDone:
+	initWithCharactersNoCopy:${1:(unichar*)characters} length:${2:(NSUInteger)length} freeWhenDone:${3:(BOOL)freeBuffer}
 snippet initWithCoder:
 	initWithCoder:${1:(NSCoder*)aDecoder}
 snippet initWithCondition:
@@ -2418,8 +2553,6 @@ snippet initWithContentsOfMappedFile:
 	initWithContentsOfMappedFile:${1:(NSString*)path}
 snippet initWithContentsOfURL:
 	initWithContentsOfURL:${1:(NSURL*)url}
-snippet -initWithContentsOfURL:
-	-initWithContentsOfURL:
 snippet initWithContentsOfURL:NS_DEPRECATED
 	initWithContentsOfURL:${1:(NSURL*)url} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet initWithContentsOfURL:encoding:error:
@@ -2432,8 +2565,6 @@ snippet initWithCustomView:
 	initWithCustomView:${1:(UIView*)customView}
 snippet initWithData:
 	initWithData:${1:(NSData*)data}
-snippet -initWithData:
-	-initWithData:
 snippet initWithData:encoding:
 	initWithData:${1:(NSData*)data} encoding:${2:(NSStringEncoding)encoding}
 snippet initWithDateFormat:allowNaturalLanguage:
@@ -2454,8 +2585,8 @@ snippet initWithDominantScript:languageMap:
 	initWithDominantScript:${1:(NSString*)script} languageMap:${2:(NSDictionary*)map}
 snippet initWithDouble:
 	initWithDouble:${1:(double)value}
-snippet -initWithExpressionType:
-	-initWithExpressionType:
+snippet initWithExpressionType:
+	initWithExpressionType:${1:(NSExpressionType)type}
 snippet initWithFileAtPath:
 	initWithFileAtPath:${1:(NSString*)path}
 snippet initWithFileDescriptor:
@@ -2474,18 +2605,18 @@ snippet initWithFormat:locale:NS_FORMAT_FUNCTION
 	initWithFormat:${1:(NSString*)format} locale:${2:(id)locale,} ... NS_FORMAT_FUNCTION(1,3)
 snippet initWithFormat:locale:arguments:NS_FORMAT_FUNCTION
 	initWithFormat:${1:(NSString*)format} locale:${2:(id)locale} arguments:${3:(va_list)argList} NS_FORMAT_FUNCTION(1,0)
-snippet -initWithFrame:
-	-initWithFrame:
+snippet initWithFrame:
+	initWithFrame:${1:(CGRect)frame}
 snippet initWithFrame:reuseIdentifier:__OSX_AVAILABLE_BUT_DEPRECATED
 	initWithFrame:${1:(CGRect)frame} reuseIdentifier:${2:(NSString*)reuseIdentifier} __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_NA,__MAC_NA,__IPHONE_2_0,__IPHONE_3_0)
-snippet -initWithFrame:style:
-	-initWithFrame:style:
+snippet initWithFrame:style:
+	initWithFrame:${1:(CGRect)frame} style:${2:(UITableViewStyle)style}
 snippet initWithHost:port:protocol:realm:authenticationMethod:
 	initWithHost:${1:(NSString*)host} port:${2:(NSInteger)port} protocol:${3:(NSString*)protocol} realm:${4:(NSString*)realm} authenticationMethod:${5:(NSString*)authenticationMethod}
 snippet initWithHue:saturation:brightness:alpha:
 	initWithHue:${1:(CGFloat)hue} saturation:${2:(CGFloat)saturation} brightness:${3:(CGFloat)brightness} alpha:${4:(CGFloat)alpha}
 snippet initWithIdentity:certificates:persistence:NS_AVAILABLE
-	initWithIdentity:${1:(SecIdentityRef)identity} certificates:${2:(NSArray*)certArray} persistence:${3:(NSURLCredentialPersistence)} persistence NS_AVAILABLE(10_6, 3_0)
+	initWithIdentity:${1:(SecIdentityRef)identity} certificates:${2:(NSArray*)certArray} persistence:(NSURLCredentialPersistence) persistence NS_AVAILABLE(10_6, 3_0)
 snippet initWithImage:
 	initWithImage:${1:(UIImage*)image}
 snippet initWithImage:highlightedImage:__OSX_AVAILABLE_STARTING
@@ -2495,20 +2626,20 @@ snippet initWithImage:style:target:action:
 snippet initWithIndex:
 	initWithIndex:${1:(NSUInteger)index}
 	initWithIndex:${1:(NSUInteger)value}
-snippet -initWithIndexSet:
-	-initWithIndexSet:
-snippet -initWithIndexes:length:
-	-initWithIndexes:length:
-snippet -initWithIndexesInRange:
-	-initWithIndexesInRange:
+snippet initWithIndexSet:
+	initWithIndexSet:${1:(NSIndexSet*)indexSet}
+snippet initWithIndexes:length:
+	initWithIndexes:${1:(NSUInteger*)indexes} length:${2:(NSUInteger)length}
+snippet initWithIndexesInRange:
+	initWithIndexesInRange:${1:(NSRange)range}
 snippet initWithInt:
 	initWithInt:${1:(int)value}
 snippet initWithInteger:
 	initWithInteger:${1:(NSInteger)value}
-snippet -initWithInvocation:
-	-initWithInvocation:
-snippet -initWithItems:
-	-initWithItems:
+snippet initWithInvocation:
+	initWithInvocation:${1:(NSInvocation*)inv}
+snippet initWithItems:
+	initWithItems:${1:(NSArray*)items}
 snippet initWithKey:ascending:
 	initWithKey:${1:(NSString*)key} ascending:${2:(BOOL)ascending}
 snippet initWithKey:ascending:comparator:NS_AVAILABLE
@@ -2526,13 +2657,13 @@ snippet initWithLocaleIdentifier:
 snippet initWithLong:
 	initWithLong:${1:(long)value}
 snippet initWithLongLong:
-	initWithLongLong:${1:(long} long)value
-snippet -initWithMachPort:
-	-initWithMachPort:
+	initWithLongLong:${1:(long long)value}
+snippet initWithMachPort:
+	initWithMachPort:${1:(uint32_t)machPort}
 snippet initWithMachPort:options:NS_AVAILABLE
 	initWithMachPort:${1:(uint32_t)machPort} options:${2:(NSUInteger)f} NS_AVAILABLE(10_5, 2_0)
 snippet initWithMantissa:exponent:isNegative:
-	initWithMantissa:${1:(unsigned} long long)mantissa exponent:${2:(short)exponent} isNegative:${3:(BOOL)flag}
+	initWithMantissa:${1:(unsigned long long)mantissa} exponent:${2:(short)exponent} isNegative:${3:(BOOL)flag}
 snippet initWithMarkupText:
 	initWithMarkupText:${1:(NSString*)markupText}
 snippet initWithMemoryCapacity:diskCapacity:diskPath:
@@ -2550,7 +2681,7 @@ snippet initWithNotificationCenter:
 snippet initWithObjects:NS_REQUIRES_NIL_TERMINATION
 	initWithObjects:${1:(id)firstObj,} ... NS_REQUIRES_NIL_TERMINATION
 snippet initWithObjects:count:
-	initWithObjects:${1:(const} id*)objects count:${2:(NSUInteger)cnt}
+	initWithObjects:${1:(const id*)objects} count:${2:(NSUInteger)cnt}
 	initWithObjects:${1:(id*)objects} count:${2:(NSUInteger)cnt}
 snippet initWithObjects:forKeys:
 	initWithObjects:${1:(NSArray*)objects} forKeys:${2:(NSArray*)keys}
@@ -2564,8 +2695,8 @@ snippet initWithPattern:options:error:
 	initWithPattern:${1:(NSString*)pattern} options:${2:(NSRegularExpressionOptions)options} error:${3:(NSError**)error}
 snippet initWithPatternImage:
 	initWithPatternImage:${1:(UIImage*)image}
-snippet -initWithProgressViewStyle:
-	-initWithProgressViewStyle:
+snippet initWithProgressViewStyle:
+	initWithProgressViewStyle:${1:(UIProgressViewStyle)style}
 snippet initWithProperties:
 	initWithProperties:${1:(NSDictionary*)properties}
 snippet initWithProtectionSpace:proposedCredential:previousFailureCount:failureResponse:error:sender:
@@ -2579,7 +2710,7 @@ snippet initWithProxyHost:port:type:realm:authenticationMethod:
 snippet initWithRed:green:blue:alpha:
 	initWithRed:${1:(CGFloat)red} green:${2:(CGFloat)green} blue:${3:(CGFloat)blue} alpha:${4:(CGFloat)alpha}
 snippet initWithRequest:cachedResponse:client:
-	initWithRequest:${1:(NSURLRequest*)request} cachedResponse:${2:(NSCachedURLResponse*)cachedResponse} client:${3:(id} <NSURLProtocolClient>)client
+	initWithRequest:${1:(NSURLRequest*)request} cachedResponse:${2:(NSCachedURLResponse*)cachedResponse} client:${3:(id <NSURLProtocolClient>)client}
 snippet initWithRequest:delegate:
 	initWithRequest:${1:(NSURLRequest*)request} delegate:${2:(id)delegate}
 snippet initWithRequest:delegate:startImmediately:NS_AVAILABLE
@@ -2588,12 +2719,12 @@ snippet initWithResponse:data:
 	initWithResponse:${1:(NSURLResponse*)response} data:${2:(NSData*)data}
 snippet initWithResponse:data:userInfo:storagePolicy:
 	initWithResponse:${1:(NSURLResponse*)response} data:${2:(NSData*)data} userInfo:${3:(NSDictionary*)userInfo} storagePolicy:${4:(NSURLCacheStoragePolicy)storagePolicy}
-snippet -initWithRootViewController:
-	-initWithRootViewController:
+snippet initWithRootViewController:
+	initWithRootViewController:${1:(UIViewController*)rootViewController}
 snippet initWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero:
 	initWithRoundingMode:${1:(NSRoundingMode)roundingMode} scale:${2:(short)scale} raiseOnExactness:${3:(BOOL)exact} raiseOnOverflow:${4:(BOOL)overflow} raiseOnUnderflow:${5:(BOOL)underflow} raiseOnDivideByZero:${6:(BOOL)divideByZero}
-snippet -initWithScheme:host:path:
-	-initWithScheme:host:path:
+snippet initWithScheme:host:path:
+	initWithScheme:${1:(NSString*)scheme} host:${2:(NSString*)host} path:${3:(NSString*)path}
 snippet initWithSearchBar:contentsController:
 	initWithSearchBar:${1:(UISearchBar*)searchBar} contentsController:${2:(UIViewController*)viewController}
 snippet initWithSerializedRepresentation:
@@ -2611,31 +2742,27 @@ snippet initWithString:
 	initWithString:${1:(NSString*)numberValue}
 	initWithString:${1:(NSString*)string}
 	initWithString:${1:(NSString*)aString}
-snippet -initWithString:
-	-initWithString:
 snippet initWithString:attributes:
 	initWithString:${1:(NSString*)str} attributes:${2:(NSDictionary*)attrs}
 snippet initWithString:locale:
 	initWithString:${1:(NSString*)numberValue} locale:${2:(id)locale}
-snippet -initWithString:relativeToURL:
-	-initWithString:relativeToURL:
 snippet initWithStyle:
 	initWithStyle:${1:(UITableViewStyle)style}
 snippet initWithStyle:reuseIdentifier:__OSX_AVAILABLE_STARTING
 	initWithStyle:${1:(UITableViewCellStyle)style} reuseIdentifier:${2:(NSString*)reuseIdentifier} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet initWithTCPPort:
-	initWithTCPPort:${1:(unsigned} short)port
+	initWithTCPPort:${1:(unsigned short)port}
 snippet initWithTabBarSystemItem:tag:
 	initWithTabBarSystemItem:${1:(UITabBarSystemItem)systemItem} tag:${2:(NSInteger)tag}
-snippet -initWithTarget:action:
-	-initWithTarget:action:
+snippet initWithTarget:action:
+	initWithTarget:${1:(id)target} action:${2:(SEL)action}
 snippet initWithTarget:selector:object:
 	initWithTarget:${1:(id)target} selector:${2:(SEL)sel} object:${3:(id)arg}
 	initWithTarget:${1:(id)target} selector:${2:(SEL)selector} object:${3:(id)argument}
 snippet initWithText:
 	initWithText:${1:(NSString*)text}
 snippet initWithTextInput:
-	initWithTextInput:${1:(UIResponder} <UITextInput>*)textInput
+	initWithTextInput:${1:(UIResponder <UITextInput>*)textInput}
 snippet initWithTimeInterval:sinceDate:
 	initWithTimeInterval:${1:(NSTimeInterval)secsToBeAdded} sinceDate:${2:(NSDate*)anotherDate}
 snippet initWithTimeIntervalSince1970:NS_AVAILABLE
@@ -2650,10 +2777,10 @@ snippet initWithTitle:action:
 	initWithTitle:${1:(NSString*)title} action:${2:(SEL)action}
 snippet initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:NS_REQUIRES_NIL_TERMINATION
 	initWithTitle:${1:(NSString*)title} delegate:${2:(id<UIActionSheetDelegate>)delegate} cancelButtonTitle:${3:(NSString*)cancelButtonTitle} destructiveButtonTitle:${4:(NSString*)destructiveButtonTitle} otherButtonTitles:${5:(NSString*)otherButtonTitles,} ... NS_REQUIRES_NIL_TERMINATION
-snippet -initWithTitle:image:tag:
-	-initWithTitle:image:tag:
+snippet initWithTitle:image:tag:
+	initWithTitle:${1:(NSString*)title} image:${2:(UIImage*)image} tag:${3:(NSInteger)tag}
 snippet initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:NS_REQUIRES_NIL_TERMINATION
-	initWithTitle:${1:(NSString*)title} message:${2:(NSString*)message} delegate:${3:(id} \/*<UIAlertViewDelegate>*\/)delegate cancelButtonTitle:${4:(NSString*)cancelButtonTitle} otherButtonTitles:${5:(NSString*)otherButtonTitles,} ... NS_REQUIRES_NIL_TERMINATION
+	initWithTitle:${1:(NSString*)title} message:${2:(NSString*)message} delegate:${3:(id \/*<UIAlertViewDelegate>*\/)delegate} cancelButtonTitle:${4:(NSString*)cancelButtonTitle} otherButtonTitles:${5:(NSString*)otherButtonTitles,} ... NS_REQUIRES_NIL_TERMINATION
 snippet initWithTitle:style:target:action:
 	initWithTitle:${1:(NSString*)title} style:${2:(UIBarButtonItemStyle)style} target:${3:(id)target} action:${4:(SEL)action}
 snippet initWithTrust:NS_AVAILABLE
@@ -2675,19 +2802,19 @@ snippet initWithURL:cachePolicy:timeoutInterval:
 snippet initWithURL:options:error:NS_AVAILABLE
 	initWithURL:${1:(NSURL*)url} options:${2:(NSFileWrapperReadingOptions)options} error:${3:(NSError**)outError} NS_AVAILABLE(10_6, 4_0)
 snippet initWithUTF8String:
-	initWithUTF8String:${1:(const} char*)nullTerminatedCString
+	initWithUTF8String:${1:(const char*)nullTerminatedCString}
 snippet initWithUnsignedChar:
-	initWithUnsignedChar:${1:(unsigned} char)value
+	initWithUnsignedChar:${1:(unsigned char)value}
 snippet initWithUnsignedInt:
-	initWithUnsignedInt:${1:(unsigned} int)value
+	initWithUnsignedInt:${1:(unsigned int)value}
 snippet initWithUnsignedInteger:
 	initWithUnsignedInteger:${1:(NSUInteger)value}
 snippet initWithUnsignedLong:
-	initWithUnsignedLong:${1:(unsigned} long)value
+	initWithUnsignedLong:${1:(unsigned long)value}
 snippet initWithUnsignedLongLong:
-	initWithUnsignedLongLong:${1:(unsigned} long long)value
+	initWithUnsignedLongLong:${1:(unsigned long long)value}
 snippet initWithUnsignedShort:
-	initWithUnsignedShort:${1:(unsigned} short)value
+	initWithUnsignedShort:${1:(unsigned short)value}
 snippet initWithUser:
 	initWithUser:${1:(NSString*)username}
 snippet initWithUser:password:persistence:
@@ -2706,8 +2833,8 @@ snippet insertSections:withRowAnimation:
 	insertSections:${1:(NSIndexSet*)sections} withRowAnimation:${2:(UITableViewRowAnimation)animation}
 snippet insertSegmentWithImage:atIndex:animated:
 	insertSegmentWithImage:${1:(UIImage*)image}  atIndex:${2:(NSUInteger)segment} animated:${3:(BOOL)animated}
-snippet -insertSegmentWithTitle:atIndex:animated:
-	-insertSegmentWithTitle:atIndex:animated:
+snippet insertSegmentWithTitle:atIndex:animated:
+	insertSegmentWithTitle:${1:(NSString*)title} atIndex:${2:(NSUInteger)segment} animated:${3:(BOOL)animated}
 snippet insertString:atIndex:
 	insertString:${1:(NSString*)aString} atIndex:${2:(NSUInteger)loc}
 snippet insertSubview:aboveSubview:
@@ -2766,8 +2893,8 @@ snippet isDaylightSavingTimeForDate:
 	isDaylightSavingTimeForDate:${1:(NSDate*)aDate}
 snippet isDeletableFileAtPath:
 	isDeletableFileAtPath:${1:(NSString*)path}
-snippet -isDescendantOfView:
-	-isDescendantOfView:
+snippet isDescendantOfView:
+	isDescendantOfView:${1:(UIView*)view}
 snippet isDirectory
 	isDirectory
 snippet isEnabledForSegmentAtIndex:
@@ -2802,16 +2929,16 @@ snippet isExecuting
 	isExecuting
 snippet isFileReferenceURLNS_AVAILABLE
 	isFileReferenceURL NS_AVAILABLE(10_6, 4_0)
-snippet -isFileURL
-	-isFileURL
+snippet isFileURL
+	isFileURL
 snippet isFinished
 	isFinished
 snippet isFirstResponder
 	isFirstResponder
 snippet isHTTPOnly
 	isHTTPOnly
-snippet -isIgnoringInteractionEvents
-	-isIgnoringInteractionEvents
+snippet isIgnoringInteractionEvents
+	isIgnoringInteractionEvents
 snippet isKindOfClass:
 	isKindOfClass:${1:(Class)aClass}
 snippet isLenientNS_AVAILABLE
@@ -2819,8 +2946,6 @@ snippet isLenientNS_AVAILABLE
 	isLenient NS_AVAILABLE(10_5, 2_0)
 snippet isLoadedNS_AVAILABLE
 	isLoaded NS_AVAILABLE(10_2, 2_0)
-snippet isMainThread
-	isMainThread
 snippet isMemberOfClass:
 	isMemberOfClass:${1:(Class)aClass}
 snippet isOneway
@@ -2831,10 +2956,10 @@ snippet isPartialStringValid:proposedSelectedRange:originalString:originalSelect
 	isPartialStringValid:${1:(NSString**)partialStringPtr} proposedSelectedRange:${2:(NSRangePointer)proposedSelRangePtr} originalString:${3:(NSString*)origString} originalSelectedRange:${4:(NSRange)origSelRange} errorDescription:${5:(NSString**)error}
 snippet isPartialStringValidationEnabledNS_AVAILABLE
 	isPartialStringValidationEnabled NS_AVAILABLE(10_5, 2_0)
-snippet -isPosition:atBoundary:inDirection:
-	-isPosition:atBoundary:inDirection:
-snippet -isPosition:withinTextUnit:inDirection:
-	-isPosition:withinTextUnit:inDirection:
+snippet isPosition:atBoundary:inDirection:
+	isPosition:${1:(UITextPosition*)position} atBoundary:${2:(UITextGranularity)granularity} inDirection:${3:(UITextDirection)direction}
+snippet isPosition:withinTextUnit:inDirection:
+	isPosition:${1:(UITextPosition*)position} withinTextUnit:${2:(UITextGranularity)granularity} inDirection:${3:(UITextDirection)direction}
 snippet isProxy
 	isProxy
 snippet isReadableFileAtPath:
@@ -2876,9 +3001,9 @@ snippet keyForFileWrapper:
 snippet keyPath
 	keyPath
 snippet keysOfEntriesPassingTest:NS_AVAILABLE
-	keysOfEntriesPassingTest:${1:(BOOL(^)(id} key, id obj, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	keysOfEntriesPassingTest:${1:(BOOL(^)(id key, id obj, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet keysOfEntriesWithOptions:passingTest:NS_AVAILABLE
-	keysOfEntriesWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(id} key, id obj, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	keysOfEntriesWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(id key, id obj, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet keysSortedByValueUsingComparator:NS_AVAILABLE
 	keysSortedByValueUsingComparator:${1:(NSComparator)cmptr} NS_AVAILABLE(10_6, 4_0)
 snippet keysSortedByValueUsingSelector:
@@ -2899,20 +3024,18 @@ snippet laterDate:
 	laterDate:${1:(NSDate*)anotherDate}
 snippet layoutIfNeeded
 	layoutIfNeeded
-snippet -layoutSubviews
-	-layoutSubviews
+snippet layoutSubviews
+	layoutSubviews
 snippet leftExpression
 	leftExpression
-snippet -leftExpressionNS_AVAILABLE
-	-leftExpressionNS_AVAILABLE
+snippet leftExpressionNS_AVAILABLE
+	leftExpression NS_AVAILABLE(10_5, 3_0)
 snippet leftViewRectForBounds:
 	leftViewRectForBounds:${1:(CGRect)bounds}
 snippet length
 	length
-snippet -length
-	-length
-snippet -lengthOfBytesUsingEncoding:
-	-lengthOfBytesUsingEncoding:
+snippet lengthOfBytesUsingEncoding:
+	lengthOfBytesUsingEncoding:${1:(NSStringEncoding)enc}
 snippet levelNS_AVAILABLE
 	level NS_AVAILABLE(10_6, 4_0)
 snippet levelsOfUndo
@@ -2939,14 +3062,14 @@ snippet loadNibNamed:owner:options:
 	loadNibNamed:${1:(NSString*)name} owner:${2:(id)owner} options:${3:(NSDictionary*)options}
 snippet loadRequest:
 	loadRequest:${1:(NSURLRequest*)request}
-snippet -loadResourceDataNotifyingClient:usingCache:NS_DEPRECATED
-	-loadResourceDataNotifyingClient:usingCache:NS_DEPRECATED
-snippet -loadView
-	-loadView
+snippet loadResourceDataNotifyingClient:usingCache:NS_DEPRECATED
+	loadResourceDataNotifyingClient:${1:(id)client} usingCache:${2:(BOOL)shouldUseCache} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
+snippet loadView
+	loadView
 snippet locale
 	locale
-snippet -localeIdentifier
-	-localeIdentifier
+snippet localeIdentifier
+	localeIdentifier
 snippet localeNS_AVAILABLE
 	locale NS_AVAILABLE(10_4, 2_0)
 snippet localizations
@@ -2973,12 +3096,10 @@ snippet localizedStringForKey:value:table:
 	localizedStringForKey:${1:(NSString*)key} value:${2:(NSString*)value} table:${3:(NSString*)tableName}
 snippet localizesFormat
 	localizesFormat
-snippet -locationInView:
-	-locationInView:
 snippet locationInView:
 	locationInView:${1:(UIView*)view}
-snippet -locationOfTouch:inView:
-	-locationOfTouch:inView:
+snippet locationOfTouch:inView:
+	locationOfTouch:${1:(NSUInteger)touchIndex} inView:${2:(UIView*)view}
 snippet lockBeforeDate:
 	lockBeforeDate:${1:(NSDate*)limit}
 snippet lockWhenCondition:
@@ -3001,8 +3122,8 @@ snippet machPort
 	machPort
 snippet mainDocumentURL
 	mainDocumentURL
-snippet -makeKeyAndVisible
-	-makeKeyAndVisible
+snippet makeKeyAndVisible
+	makeKeyAndVisible
 snippet makeKeyWindow
 	makeKeyWindow
 snippet makeObjectsPerformSelector:
@@ -3021,8 +3142,8 @@ snippet maximumFractionDigitsNS_AVAILABLE
 	maximumFractionDigits NS_AVAILABLE(10_4, 2_0)
 snippet maximumIntegerDigitsNS_AVAILABLE
 	maximumIntegerDigits NS_AVAILABLE(10_4, 2_0)
-snippet -maximumLengthOfBytesUsingEncoding:
-	-maximumLengthOfBytesUsingEncoding:
+snippet maximumLengthOfBytesUsingEncoding:
+	maximumLengthOfBytesUsingEncoding:${1:(NSStringEncoding)enc}
 snippet maximumRangeOfUnit:
 	maximumRangeOfUnit:${1:(NSCalendarUnit)unit}
 snippet maximumSignificantDigitsNS_AVAILABLE
@@ -3107,12 +3228,12 @@ snippet nameNS_AVAILABLE
 	name NS_AVAILABLE(10_6, 4_0)
 snippet navigationBar:didPopItem:
 	navigationBar:${1:(UINavigationBar*)navigationBar} didPopItem:${2:(UINavigationItem*)item}
-snippet -navigationBar:didPushItem:
-	-navigationBar:didPushItem:
-snippet -navigationBar:shouldPopItem:
-	-navigationBar:shouldPopItem:
-snippet -navigationBar:shouldPushItem:
-	-navigationBar:shouldPushItem:
+snippet navigationBar:didPushItem:
+	navigationBar:${1:(UINavigationBar*)navigationBar} didPushItem:${2:(UINavigationItem*)item}
+snippet navigationBar:shouldPopItem:
+	navigationBar:${1:(UINavigationBar*)navigationBar} shouldPopItem:${2:(UINavigationItem*)item}
+snippet navigationBar:shouldPushItem:
+	navigationBar:${1:(UINavigationBar*)navigationBar} shouldPushItem:${2:(UINavigationItem*)item}
 snippet navigationController:didShowViewController:animated:
 	navigationController:${1:(UINavigationController*)navigationController} didShowViewController:${2:(UIViewController*)viewController} animated:${3:(BOOL)animated}
 snippet navigationController:willShowViewController:animated:
@@ -3161,8 +3282,8 @@ snippet networkServiceTypeNS_AVAILABLE_IPHONE
 	networkServiceType NS_AVAILABLE_IPHONE(4_0)
 snippet nextDaylightSavingTimeTransitionAfterDate:NS_AVAILABLE
 	nextDaylightSavingTimeTransitionAfterDate:${1:(NSDate*)aDate} NS_AVAILABLE(10_5, 2_0)
-snippet -nextDaylightSavingTimeTransitionNS_AVAILABLE
-	-nextDaylightSavingTimeTransitionNS_AVAILABLE
+snippet nextDaylightSavingTimeTransitionNS_AVAILABLE
+	nextDaylightSavingTimeTransition NS_AVAILABLE(10_5, 2_0)
 snippet nextObject
 	nextObject
 snippet nextResponder
@@ -3181,18 +3302,18 @@ snippet numberOfComponentsInPickerView:
 	numberOfComponentsInPickerView:${1:(UIPickerView*)pickerView}
 snippet numberOfMatchesInString:options:range:
 	numberOfMatchesInString:${1:(NSString*)string} options:${2:(NSMatchingOptions)options} range:${3:(NSRange)range}
-snippet -numberOfPages
-	-numberOfPages
+snippet numberOfPages
+	numberOfPages
 snippet numberOfRowsInComponent:
 	numberOfRowsInComponent:${1:(NSInteger)component}
 snippet numberOfRowsInSection:
 	numberOfRowsInSection:${1:(NSInteger)section}
 snippet numberOfSections
 	numberOfSections
-snippet -numberOfSectionsInTableView:
-	-numberOfSectionsInTableView:
-snippet -numberOfTouches
-	-numberOfTouches
+snippet numberOfSectionsInTableView:
+	numberOfSectionsInTableView:${1:(UITableView*)tableView}
+snippet numberOfTouches
+	numberOfTouches
 snippet numberStyleNS_AVAILABLE
 	numberStyle NS_AVAILABLE(10_4, 2_0)
 snippet objCType
@@ -3220,9 +3341,9 @@ snippet objectsAtIndexes:NS_AVAILABLE
 snippet objectsForKeys:notFoundMarker:
 	objectsForKeys:${1:(NSArray*)keys} notFoundMarker:${2:(id)marker}
 snippet objectsPassingTest:NS_AVAILABLE
-	objectsPassingTest:${1:(BOOL(^)(id} obj, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	objectsPassingTest:${1:(BOOL(^)(id obj, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet objectsWithOptions:passingTest:NS_AVAILABLE
-	objectsWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(id} obj, BOOL*stop))predicate NS_AVAILABLE(10_6, 4_0)
+	objectsWithOptions:${1:(NSEnumerationOptions)opts} passingTest:${2:(BOOL(^)(id obj, BOOL*stop))predicate} NS_AVAILABLE(10_6, 4_0)
 snippet observationInfo
 	observationInfo
 snippet observeValueForKeyPath:ofObject:change:context:
@@ -3233,8 +3354,8 @@ snippet offsetInFile
 	offsetInFile
 snippet openURL:
 	openURL:${1:(NSURL*)url}
-snippet -operand
-	-operand
+snippet operand
+	operand
 snippet operatingSystem
 	operatingSystem
 snippet operatingSystemName
@@ -3259,8 +3380,6 @@ snippet paragraphRangeForRange:
 	paragraphRangeForRange:${1:(NSRange)range}
 snippet parameterString
 	parameterString
-snippet -parse
-	-parse
 snippet parser:didEndElement:namespaceURI:qualifiedName:
 	parser:${1:(NSXMLParser*)parser} didEndElement:${2:(NSString*)elementName} namespaceURI:${3:(NSString*)namespaceURI} qualifiedName:${4:(NSString*)qName}
 snippet parser:didEndMappingPrefix:
@@ -3301,16 +3420,16 @@ snippet parserDidEndDocument:
 	parserDidEndDocument:${1:(NSXMLParser*)parser}
 snippet parserDidStartDocument:
 	parserDidStartDocument:${1:(NSXMLParser*)parser}
-snippet -parserError
-	-parserError
+snippet parserError
+	parserError
 snippet password
 	password
 snippet paste:__OSX_AVAILABLE_STARTING
 	paste:${1:(id)sender} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet pasteboardTypes
 	pasteboardTypes
-snippet -pasteboardTypesForItemSet:
-	-pasteboardTypesForItemSet:
+snippet pasteboardTypesForItemSet:
+	pasteboardTypesForItemSet:${1:(NSIndexSet*)itemSet}
 snippet pathComponents
 	pathComponents
 snippet pathComponentsNS_AVAILABLE
@@ -3385,22 +3504,22 @@ snippet pickerView:widthForComponent:
 	pickerView:${1:(UIPickerView*)pickerView} widthForComponent:${2:(NSInteger)component}
 snippet placeholderRectForBounds:
 	placeholderRectForBounds:${1:(CGRect)bounds}
-snippet -playInputClick__OSX_AVAILABLE_STARTING
-	-playInputClick__OSX_AVAILABLE_STARTING
+snippet playInputClick__OSX_AVAILABLE_STARTING
+	playInputClick __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_2)
 snippet plusSignNS_AVAILABLE
 	plusSign NS_AVAILABLE(10_4, 2_0)
-snippet -pointInside:withEvent:
-	-pointInside:withEvent:
+snippet pointInside:withEvent:
+	pointInside:${1:(CGPoint)point} withEvent:${2:(UIEvent*)event}
 snippet pointerValue
 	pointerValue
-snippet -popNavigationItemAnimated:
-	-popNavigationItemAnimated:
-snippet -popToRootViewControllerAnimated:
-	-popToRootViewControllerAnimated:
-snippet -popToViewController:animated:
-	-popToViewController:animated:
-snippet -popViewControllerAnimated:
-	-popViewControllerAnimated:
+snippet popNavigationItemAnimated:
+	popNavigationItemAnimated:${1:(BOOL)animated}
+snippet popToRootViewControllerAnimated:
+	popToRootViewControllerAnimated:${1:(BOOL)animated}
+snippet popToViewController:animated:
+	popToViewController:${1:(UIViewController*)viewController} animated:${2:(BOOL)animated}
+snippet popViewControllerAnimated:
+	popViewControllerAnimated:${1:(BOOL)animated}
 snippet popoverControllerDidDismissPopover:
 	popoverControllerDidDismissPopover:${1:(UIPopoverController*)popoverController}
 snippet popoverControllerShouldDismissPopover:
@@ -3411,8 +3530,8 @@ snippet positionFromPosition:inDirection:offset:
 	positionFromPosition:${1:(UITextPosition*)position} inDirection:${2:(UITextLayoutDirection)direction} offset:${3:(NSInteger)offset}
 snippet positionFromPosition:offset:
 	positionFromPosition:${1:(UITextPosition*)position} offset:${2:(NSInteger)offset}
-snippet -positionFromPosition:toBoundary:inDirection:
-	-positionFromPosition:toBoundary:inDirection:
+snippet positionFromPosition:toBoundary:inDirection:
+	positionFromPosition:${1:(UITextPosition*)position} toBoundary:${2:(UITextGranularity)granularity} inDirection:${3:(UITextDirection)direction}
 snippet positionWithinRange:atCharacterOffset:
 	positionWithinRange:${1:(UITextRange*)range} atCharacterOffset:${2:(NSInteger)offset}
 snippet positionWithinRange:farthestInDirection:
@@ -3435,36 +3554,36 @@ snippet precomposedStringWithCanonicalMapping
 	precomposedStringWithCanonicalMapping
 snippet precomposedStringWithCompatibilityMapping
 	precomposedStringWithCompatibilityMapping
-snippet -predicateFormat
-	-predicateFormat
+snippet predicateFormat
+	predicateFormat
 snippet predicateNS_AVAILABLE
 	predicate NS_AVAILABLE(10_5, 3_0)
 snippet predicateOperatorType
 	predicateOperatorType
-snippet -predicateWithSubstitutionVariables:
-	-predicateWithSubstitutionVariables:
+snippet predicateWithSubstitutionVariables:
+	predicateWithSubstitutionVariables:${1:(NSDictionary*)variables}
 snippet preferredFilename
 	preferredFilename
 snippet preferredLocalizations
 	preferredLocalizations
 snippet preflightAndReturnError:NS_AVAILABLE
 	preflightAndReturnError:${1:(NSError**)error} NS_AVAILABLE(10_5, 2_0)
-snippet -prepareForDrawingPages:
-	-prepareForDrawingPages:
-snippet -prepareForReuse
-	-prepareForReuse
+snippet prepareForDrawingPages:
+	prepareForDrawingPages:${1:(NSRange)range}
+snippet prepareForReuse
+	prepareForReuse
 snippet prepareWithInvocationTarget:
 	prepareWithInvocationTarget:${1:(id)target}
-snippet -presentAnimated:completionHandler:
-	-presentAnimated:completionHandler:
-snippet -presentFromBarButtonItem:animated:completionHandler:
-	-presentFromBarButtonItem:animated:completionHandler:
-snippet -presentFromRect:inView:animated:completionHandler:
-	-presentFromRect:inView:animated:completionHandler:
+snippet presentAnimated:completionHandler:
+	presentAnimated:${1:(BOOL)animated} completionHandler:${2:(UIPrintInteractionCompletionHandler)completion}
+snippet presentFromBarButtonItem:animated:completionHandler:
+	presentFromBarButtonItem:${1:(UIBarButtonItem*)item} animated:${2:(BOOL)animated} completionHandler:${3:(UIPrintInteractionCompletionHandler)completion}
+snippet presentFromRect:inView:animated:completionHandler:
+	presentFromRect:${1:(CGRect)rect} inView:${2:(UIView*)view} animated:${3:(BOOL)animated} completionHandler:${4:(UIPrintInteractionCompletionHandler)completion}
 snippet presentLocalNotificationNow:__OSX_AVAILABLE_STARTING
 	presentLocalNotificationNow:${1:(UILocalNotification*)notification} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
-snippet -presentModalViewController:animated:
-	-presentModalViewController:animated:
+snippet presentModalViewController:animated:
+	presentModalViewController:${1:(UIViewController*)modalViewController} animated:${2:(BOOL)animated}
 snippet presentOpenInMenuFromBarButtonItem:animated:
 	presentOpenInMenuFromBarButtonItem:${1:(UIBarButtonItem*)item} animated:${2:(BOOL)animated}
 snippet presentOpenInMenuFromRect:inView:animated:
@@ -3545,8 +3664,8 @@ snippet publishWithOptions:
 	publishWithOptions:${1:(NSNetServiceOptions)options}
 snippet pushNavigationItem:animated:
 	pushNavigationItem:${1:(UINavigationItem*)item} animated:${2:(BOOL)animated}
-snippet -pushViewController:animated:
-	-pushViewController:animated:
+snippet pushViewController:animated:
+	pushViewController:${1:(UIViewController*)viewController} animated:${2:(BOOL)animated}
 snippet quarterNS_AVAILABLE
 	quarter NS_AVAILABLE(10_6, 4_0)
 snippet quarterSymbolsNS_AVAILABLE
@@ -3555,8 +3674,8 @@ snippet queuePriority
 	queuePriority
 snippet rangeAtIndex:NS_AVAILABLE
 	rangeAtIndex:${1:(NSUInteger)idx} NS_AVAILABLE(NA, 4_0)
-snippet -rangeEnclosingPosition:withGranularity:inDirection:
-	-rangeEnclosingPosition:withGranularity:inDirection:
+snippet rangeEnclosingPosition:withGranularity:inDirection:
+	rangeEnclosingPosition:${1:(UITextPosition*)position} withGranularity:${2:(UITextGranularity)granularity} inDirection:${3:(UITextDirection)direction}
 snippet rangeOfCharacterFromSet:
 	rangeOfCharacterFromSet:${1:(NSCharacterSet*)aSet}
 snippet rangeOfCharacterFromSet:options:
@@ -3613,12 +3732,12 @@ snippet rectForFooterInSection:
 	rectForFooterInSection:${1:(NSInteger)section}
 snippet rectForHeaderInSection:
 	rectForHeaderInSection:${1:(NSInteger)section}
-snippet -rectForPageAtIndex:
-	-rectForPageAtIndex:
+snippet rectForPageAtIndex:
+	rectForPageAtIndex:${1:(NSInteger)pageIndex}
 snippet rectForRowAtIndexPath:
 	rectForRowAtIndexPath:${1:(NSIndexPath*)indexPath}
-snippet -rectForSection:
-	-rectForSection:
+snippet rectForSection:
+	rectForSection:${1:(NSInteger)section}
 snippet redoActionName
 	redoActionName
 snippet redoMenuItemTitle
@@ -3633,10 +3752,10 @@ snippet registerUndoWithTarget:selector:object:
 	registerUndoWithTarget:${1:(id)target} selector:${2:(SEL)selector} object:${3:(id)anObject}
 snippet regularFileContents
 	regularFileContents
-snippet -relativePath
-	-relativePath
-snippet -relativeString
-	-relativeString
+snippet relativePath
+	relativePath
+snippet relativeString
+	relativeString
 snippet release
 	release
 snippet reload
@@ -3645,14 +3764,14 @@ snippet reloadAllComponents
 	reloadAllComponents
 snippet reloadComponent:
 	reloadComponent:${1:(NSInteger)component}
-snippet -reloadData
-	-reloadData
+snippet reloadData
+	reloadData
 snippet reloadInputViews__OSX_AVAILABLE_STARTING
 	reloadInputViews __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_2)
 snippet reloadRowsAtIndexPaths:withRowAnimation:__OSX_AVAILABLE_STARTING
 	reloadRowsAtIndexPaths:${1:(NSArray*)indexPaths} withRowAnimation:${2:(UITableViewRowAnimation)animation} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
-snippet -reloadSectionIndexTitles__OSX_AVAILABLE_STARTING
-	-reloadSectionIndexTitles__OSX_AVAILABLE_STARTING
+snippet reloadSectionIndexTitles__OSX_AVAILABLE_STARTING
+	reloadSectionIndexTitles __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet reloadSections:withRowAnimation:__OSX_AVAILABLE_STARTING
 	reloadSections:${1:(NSIndexSet*)sections} withRowAnimation:${2:(UITableViewRowAnimation)animation} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet remoteControlReceivedWithEvent:__OSX_AVAILABLE_STARTING
@@ -3753,16 +3872,16 @@ snippet removeSegmentAtIndex:animated:
 	removeSegmentAtIndex:${1:(NSUInteger)segment} animated:${2:(BOOL)animated}
 snippet removeSuiteNamed:
 	removeSuiteNamed:${1:(NSString*)suiteName}
-snippet -removeTarget:action:
-	-removeTarget:action:
+snippet removeTarget:action:
+	removeTarget:${1:(id)target} action:${2:(SEL)action}
 snippet removeTarget:action:forControlEvents:
 	removeTarget:${1:(id)target} action:${2:(SEL)action} forControlEvents:${3:(UIControlEvents)controlEvents}
 snippet removeVolatileDomainForName:
 	removeVolatileDomainForName:${1:(NSString*)domainName}
 snippet replaceBytesInRange:withBytes:
-	replaceBytesInRange:${1:(NSRange)range} withBytes:${2:(const} void*)bytes
+	replaceBytesInRange:${1:(NSRange)range} withBytes:${2:(const void*)bytes}
 snippet replaceBytesInRange:withBytes:length:
-	replaceBytesInRange:${1:(NSRange)range} withBytes:${2:(const} void*)replacementBytes length:${3:(NSUInteger)replacementLength}
+	replaceBytesInRange:${1:(NSRange)range} withBytes:${2:(const void*)replacementBytes} length:${3:(NSUInteger)replacementLength}
 snippet replaceCharactersInRange:withAttributedString:
 	replaceCharactersInRange:${1:(NSRange)range} withAttributedString:${2:(NSAttributedString*)attrString}
 snippet replaceCharactersInRange:withString:
@@ -3794,20 +3913,20 @@ snippet request
 	request
 snippet requireGestureRecognizerToFail:
 	requireGestureRecognizerToFail:${1:(UIGestureRecognizer*)otherGestureRecognizer}
-snippet -reservedSpaceLength
-	-reservedSpaceLength
+snippet reservedSpaceLength
+	reservedSpaceLength
 snippet resetBytesInRange:
 	resetBytesInRange:${1:(NSRange)range}
 snippet resignFirstResponder
 	resignFirstResponder
-snippet -resignKeyWindow
-	-resignKeyWindow
+snippet resignKeyWindow
+	resignKeyWindow
 snippet resolveNS_DEPRECATED
 	resolve NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet resolveWithTimeout:
 	resolveWithTimeout:${1:(NSTimeInterval)timeout}
-snippet -resourceDataUsingCache:NS_DEPRECATED
-	-resourceDataUsingCache:NS_DEPRECATED
+snippet resourceDataUsingCache:NS_DEPRECATED
+	resourceDataUsingCache:${1:(BOOL)shouldUseCache} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet resourcePath
 	resourcePath
 snippet resourceSpecifier
@@ -3828,20 +3947,20 @@ snippet retainCount
 	retainCount
 snippet reverseObjectEnumerator
 	reverseObjectEnumerator
-snippet -reverseTransformedValue:
-	-reverseTransformedValue:
-snippet -reversedSortDescriptor
-	-reversedSortDescriptor
+snippet reverseTransformedValue:
+	reverseTransformedValue:${1:(id)value}
+snippet reversedSortDescriptor
+	reversedSortDescriptor
 snippet rightExpression
 	rightExpression
-snippet -rightExpressionNS_AVAILABLE
-	-rightExpressionNS_AVAILABLE
+snippet rightExpressionNS_AVAILABLE
+	rightExpression NS_AVAILABLE(10_5, 3_0)
 snippet rightViewRectForBounds:
 	rightViewRectForBounds:${1:(CGRect)bounds}
-snippet -rotatingFooterView
-	-rotatingFooterView
-snippet -rotatingHeaderView
-	-rotatingHeaderView
+snippet rotatingFooterView
+	rotatingFooterView
+snippet rotatingHeaderView
+	rotatingHeaderView
 snippet roundingBehavior
 	roundingBehavior
 snippet roundingIncrementNS_AVAILABLE
@@ -3866,14 +3985,14 @@ snippet scanDouble:
 	scanDouble:${1:(double*)value}
 snippet scanFloat:
 	scanFloat:${1:(float*)value}
-snippet -scanHexDouble:
-	-scanHexDouble:
-snippet -scanHexFloat:
-	-scanHexFloat:
-snippet -scanHexInt:
-	-scanHexInt:
+snippet scanHexDouble:
+	scanHexDouble:${1:(double*)result}
+snippet scanHexFloat:
+	scanHexFloat:${1:(float*)result}
+snippet scanHexInt:
+	scanHexInt:${1:(unsigned*)value}
 snippet scanHexLongLong:
-	scanHexLongLong:${1:(unsigned} long long*)result
+	scanHexLongLong:${1:(unsigned long long*)result}
 snippet scanInt:
 	scanInt:${1:(int*)value}
 snippet scanInteger:
@@ -3881,7 +4000,7 @@ snippet scanInteger:
 snippet scanLocation
 	scanLocation
 snippet scanLongLong:
-	scanLongLong:${1:(long} long*)value
+	scanLongLong:${1:(long long*)value}
 snippet scanString:intoString:
 	scanString:${1:(NSString*)string} intoString:${2:(NSString**)value}
 snippet scanUpToCharactersFromSet:intoString:
@@ -3893,62 +4012,62 @@ snippet scheduleInRunLoop:forMode:
 	scheduleInRunLoop:${1:(NSRunLoop*)runLoop} forMode:${2:(NSString*)mode}
 snippet scheduleInRunLoop:forMode:NS_AVAILABLE
 	scheduleInRunLoop:${1:(NSRunLoop*)aRunLoop} forMode:${2:(NSString*)mode} NS_AVAILABLE(10_5, 2_0)
-snippet -scheduleLocalNotification:__OSX_AVAILABLE_STARTING
-	-scheduleLocalNotification:__OSX_AVAILABLE_STARTING
+snippet scheduleLocalNotification:__OSX_AVAILABLE_STARTING
+	scheduleLocalNotification:${1:(UILocalNotification*)notification} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet scheme
 	scheme
 snippet scrollRangeToVisible:
 	scrollRangeToVisible:${1:(NSRange)range}
-snippet -scrollRectToVisible:animated:
-	-scrollRectToVisible:animated:
+snippet scrollRectToVisible:animated:
+	scrollRectToVisible:${1:(CGRect)rect} animated:${2:(BOOL)animated}
 snippet scrollToNearestSelectedRowAtScrollPosition:animated:
 	scrollToNearestSelectedRowAtScrollPosition:${1:(UITableViewScrollPosition)scrollPosition} animated:${2:(BOOL)animated}
 snippet scrollToRowAtIndexPath:atScrollPosition:animated:
 	scrollToRowAtIndexPath:${1:(NSIndexPath*)indexPath} atScrollPosition:${2:(UITableViewScrollPosition)scrollPosition} animated:${3:(BOOL)animated}
-snippet -scrollViewDidEndDecelerating:
-	-scrollViewDidEndDecelerating:
-snippet -scrollViewDidEndDragging:willDecelerate:
-	-scrollViewDidEndDragging:willDecelerate:
-snippet -scrollViewDidEndScrollingAnimation:
-	-scrollViewDidEndScrollingAnimation:
-snippet -scrollViewDidEndZooming:withView:atScale:
-	-scrollViewDidEndZooming:withView:atScale:
-snippet -scrollViewDidScroll:
-	-scrollViewDidScroll:
-snippet -scrollViewDidScrollToTop:
-	-scrollViewDidScrollToTop:
-snippet -scrollViewDidZoom:__OSX_AVAILABLE_STARTING
-	-scrollViewDidZoom:__OSX_AVAILABLE_STARTING
-snippet -scrollViewShouldScrollToTop:
-	-scrollViewShouldScrollToTop:
-snippet -scrollViewWillBeginDecelerating:
-	-scrollViewWillBeginDecelerating:
-snippet -scrollViewWillBeginDragging:
-	-scrollViewWillBeginDragging:
-snippet -scrollViewWillBeginZooming:withView:__OSX_AVAILABLE_STARTING
-	-scrollViewWillBeginZooming:withView:__OSX_AVAILABLE_STARTING
+snippet scrollViewDidEndDecelerating:
+	scrollViewDidEndDecelerating:${1:(UIScrollView*)scrollView}
+snippet scrollViewDidEndDragging:willDecelerate:
+	scrollViewDidEndDragging:${1:(UIScrollView*)scrollView} willDecelerate:${2:(BOOL)decelerate}
+snippet scrollViewDidEndScrollingAnimation:
+	scrollViewDidEndScrollingAnimation:${1:(UIScrollView*)scrollView}
+snippet scrollViewDidEndZooming:withView:atScale:
+	scrollViewDidEndZooming:${1:(UIScrollView*)scrollView} withView:${2:(UIView*)view} atScale:${3:(float)scale}
+snippet scrollViewDidScroll:
+	scrollViewDidScroll:${1:(UIScrollView*)scrollView}
+snippet scrollViewDidScrollToTop:
+	scrollViewDidScrollToTop:${1:(UIScrollView*)scrollView}
+snippet scrollViewDidZoom:__OSX_AVAILABLE_STARTING
+	scrollViewDidZoom:${1:(UIScrollView*)scrollView} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_2)
+snippet scrollViewShouldScrollToTop:
+	scrollViewShouldScrollToTop:${1:(UIScrollView*)scrollView}
+snippet scrollViewWillBeginDecelerating:
+	scrollViewWillBeginDecelerating:${1:(UIScrollView*)scrollView}
+snippet scrollViewWillBeginDragging:
+	scrollViewWillBeginDragging:${1:(UIScrollView*)scrollView}
+snippet scrollViewWillBeginZooming:withView:__OSX_AVAILABLE_STARTING
+	scrollViewWillBeginZooming:${1:(UIScrollView*)scrollView} withView:${2:(UIView*)view} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_2)
 snippet searchBar:selectedScopeButtonIndexDidChange:__OSX_AVAILABLE_STARTING
 	searchBar:${1:(UISearchBar*)searchBar} selectedScopeButtonIndexDidChange:${2:(NSInteger)selectedScope} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
-snippet -searchBar:shouldChangeTextInRange:replacementText:__OSX_AVAILABLE_STARTING
-	-searchBar:shouldChangeTextInRange:replacementText:__OSX_AVAILABLE_STARTING
-snippet -searchBar:textDidChange:
-	-searchBar:textDidChange:
-snippet -searchBarBookmarkButtonClicked:
-	-searchBarBookmarkButtonClicked:
-snippet -searchBarCancelButtonClicked:
-	-searchBarCancelButtonClicked:
-snippet -searchBarResultsListButtonClicked:__OSX_AVAILABLE_STARTING
-	-searchBarResultsListButtonClicked:__OSX_AVAILABLE_STARTING
-snippet -searchBarSearchButtonClicked:
-	-searchBarSearchButtonClicked:
-snippet -searchBarShouldBeginEditing:
-	-searchBarShouldBeginEditing:
-snippet -searchBarShouldEndEditing:
-	-searchBarShouldEndEditing:
-snippet -searchBarTextDidBeginEditing:
-	-searchBarTextDidBeginEditing:
-snippet -searchBarTextDidEndEditing:
-	-searchBarTextDidEndEditing:
+snippet searchBar:shouldChangeTextInRange:replacementText:__OSX_AVAILABLE_STARTING
+	searchBar:${1:(UISearchBar*)searchBar} shouldChangeTextInRange:${2:(NSRange)range} replacementText:${3:(NSString*)text} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
+snippet searchBar:textDidChange:
+	searchBar:${1:(UISearchBar*)searchBar} textDidChange:${2:(NSString*)searchText}
+snippet searchBarBookmarkButtonClicked:
+	searchBarBookmarkButtonClicked:${1:(UISearchBar*)searchBar}
+snippet searchBarCancelButtonClicked:
+	searchBarCancelButtonClicked:(UISearchBar*) searchBar
+snippet searchBarResultsListButtonClicked:__OSX_AVAILABLE_STARTING
+	searchBarResultsListButtonClicked:${1:(UISearchBar*)searchBar} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_2)
+snippet searchBarSearchButtonClicked:
+	searchBarSearchButtonClicked:${1:(UISearchBar*)searchBar}
+snippet searchBarShouldBeginEditing:
+	searchBarShouldBeginEditing:${1:(UISearchBar*)searchBar}
+snippet searchBarShouldEndEditing:
+	searchBarShouldEndEditing:${1:(UISearchBar*)searchBar}
+snippet searchBarTextDidBeginEditing:
+	searchBarTextDidBeginEditing:${1:(UISearchBar*)searchBar}
+snippet searchBarTextDidEndEditing:
+	searchBarTextDidEndEditing:${1:(UISearchBar*)searchBar}
 snippet searchDisplayController:didHideSearchResultsTableView:
 	searchDisplayController:${1:(UISearchDisplayController*)controller} didHideSearchResultsTableView:${2:(UITableView*)tableView}
 snippet searchDisplayController:didLoadSearchResultsTableView:
@@ -3993,42 +4112,40 @@ snippet sectionForObject:collationStringSelector:
 	sectionForObject:${1:(id)object} collationStringSelector:${2:(SEL)selector}
 snippet sectionForSectionIndexTitleAtIndex:
 	sectionForSectionIndexTitleAtIndex:${1:(NSInteger)indexTitleIndex}
-snippet -sectionIndexTitlesForTableView:
-	-sectionIndexTitlesForTableView:
+snippet sectionIndexTitlesForTableView:
+	sectionIndexTitlesForTableView:${1:(UITableView*)tableView}
 snippet seekToEndOfFile
 	seekToEndOfFile
 snippet seekToFileOffset:
-	seekToFileOffset:${1:(unsigned} long long)offset
+	seekToFileOffset:${1:(unsigned long long)offset}
 snippet select:__OSX_AVAILABLE_STARTING
 	select:${1:(id)sender} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet selectAll:__OSX_AVAILABLE_STARTING
 	selectAll:${1:(id)sender} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
-snippet -selectRow:inComponent:animated:
-	-selectRow:inComponent:animated:
+snippet selectRow:inComponent:animated:
+	selectRow:${1:(NSInteger)row} inComponent:${2:(NSInteger)component} animated:${3:(BOOL)animated}
 snippet selectRowAtIndexPath:animated:scrollPosition:
 	selectRowAtIndexPath:${1:(NSIndexPath*)indexPath} animated:${2:(BOOL)animated} scrollPosition:${3:(UITableViewScrollPosition)scrollPosition}
-snippet -selectedRowInComponent:
-	-selectedRowInComponent:
+snippet selectedRowInComponent:
+	selectedRowInComponent:${1:(NSInteger)component}
 snippet selectionDidChange:
-	selectionDidChange:${1:(id} <UITextInput>)textInput
+	selectionDidChange:${1:(id <UITextInput>)textInput}
 snippet selectionWillChange:
-	selectionWillChange:${1:(id} <UITextInput>)textInput
+	selectionWillChange:${1:(id <UITextInput>)textInput}
 snippet selector
 	selector
 snippet sendAction:to:forEvent:
 	sendAction:${1:(SEL)action} to:${2:(id)target} forEvent:${3:(UIEvent*)event}
 snippet sendAction:to:from:forEvent:
 	sendAction:${1:(SEL)action} to:${2:(id)target} from:${3:(id)sender} forEvent:${4:(UIEvent*)event}
-snippet -sendActionsForControlEvents:
-	-sendActionsForControlEvents:
+snippet sendActionsForControlEvents:
+	sendActionsForControlEvents:${1:(UIControlEvents)controlEvents}
 snippet sendBeforeDate:components:from:reserved:
-	sendBeforeDate:${1:(NSDate*)limitDate} components:${2:(NSMutableArray*)components} from:${3:(NSPort*)} receivePort reserved:${4:(NSUInteger)headerSpaceReserved}
+	sendBeforeDate:${1:(NSDate*)limitDate} components:${2:(NSMutableArray*)components} from:${3:(NSPort*) receivePort reserved:${4:(NSUInteger)headerSpaceReserved}}
 snippet sendBeforeDate:msgid:components:from:reserved:
 	sendBeforeDate:${1:(NSDate*)limitDate} msgid:${2:(NSUInteger)msgID} components:${3:(NSMutableArray*)components} from:${4:(NSPort*)receivePort} reserved:${5:(NSUInteger)headerSpaceReserved}
 snippet sendEvent:
 	sendEvent:${1:(UIEvent*)event}
-snippet -sendEvent:
-	-sendEvent:
 snippet sendSubviewToBack:
 	sendSubviewToBack:${1:(UIView*)view}
 snippet sender
@@ -4041,8 +4158,8 @@ snippet setAMSymbol:NS_AVAILABLE
 	setAMSymbol:${1:(NSString*)string} NS_AVAILABLE(10_4, 2_0)
 snippet setActionName:
 	setActionName:${1:(NSString*)actionName}
-snippet -setActive:animated:
-	-setActive:animated:
+snippet setActive:animated:
+	setActive:${1:(BOOL)visible} animated:${2:(BOOL)animated}
 snippet setAllHTTPHeaderFields:
 	setAllHTTPHeaderFields:${1:(NSDictionary*)headerFields}
 snippet setAllowsFloats:
@@ -4065,8 +4182,8 @@ snippet setAttributes:ofItemAtPath:error:
 	setAttributes:${1:(NSDictionary*)attributes} ofItemAtPath:${2:(NSString*)path} error:${3:(NSError**)error}
 snippet setAttributes:range:
 	setAttributes:${1:(NSDictionary*)attrs} range:${2:(NSRange)range}
-snippet -setBackgroundImage:forState:
-	-setBackgroundImage:forState:
+snippet setBackgroundImage:forState:
+	setBackgroundImage:${1:(UIImage*)image} forState:${2:(UIControlState)state}
 snippet setBaseWritingDirection:forRange:
 	setBaseWritingDirection:${1:(UITextWritingDirection)writingDirection} forRange:${2:(UITextRange*)range}
 snippet setBool:forKey:
@@ -4088,10 +4205,10 @@ snippet setCharactersToBeSkipped:
 	setCharactersToBeSkipped:${1:(NSCharacterSet*)set}
 snippet setCompletionBlock:NS_AVAILABLE
 	setCompletionBlock:${1:(void(^)(void))block} NS_AVAILABLE(10_6, 4_0)
-snippet -setContentOffset:animated:
-	-setContentOffset:animated:
-snippet -setContentOffset:forSegmentAtIndex:
-	-setContentOffset:forSegmentAtIndex:
+snippet setContentOffset:animated:
+	setContentOffset:${1:(CGPoint)contentOffset} animated:${2:(BOOL)animated}
+snippet setContentOffset:forSegmentAtIndex:
+	setContentOffset:${1:(CGSize)offset} forSegmentAtIndex:${2:(NSUInteger)segment}
 snippet setContentViewController:animated:
 	setContentViewController:${1:(UIViewController*)viewController} animated:${2:(BOOL)animated}
 snippet setCookie:
@@ -4116,8 +4233,8 @@ snippet setData:
 	setData:${1:(NSData*)data}
 snippet setData:forPasteboardType:
 	setData:${1:(NSData*)data} forPasteboardType:${2:(NSString*)pasteboardType}
-snippet -setDate:animated:
-	-setDate:animated:
+snippet setDate:animated:
+	setDate:${1:(NSDate*)date} animated:${2:(BOOL)animated}
 snippet setDateFormat:NS_AVAILABLE
 	setDateFormat:${1:(NSString*)string} NS_AVAILABLE(10_4, 2_0)
 snippet setDateStyle:NS_AVAILABLE
@@ -4133,14 +4250,14 @@ snippet setDefaultDate:NS_AVAILABLE
 snippet setDelegate:
 	setDelegate:${1:(id)d}
 	setDelegate:${1:(id)delegate}
-	setDelegate:${1:(id} <NSKeyedArchiverDelegate>)delegate
-	setDelegate:${1:(id} <NSKeyedUnarchiverDelegate>)delegate
-	setDelegate:${1:(id} <NSNetServiceBrowserDelegate>)delegate
-	setDelegate:${1:(id} <NSNetServiceDelegate>)delegate
-	setDelegate:${1:(id} <NSMachPortDelegate>)anObject
-	setDelegate:${1:(id} <NSPortDelegate>)anObject
-	setDelegate:${1:(id} <NSStreamDelegate>)delegate
-	setDelegate:${1:(id} <NSXMLParserDelegate>)delegate
+	setDelegate:${1:(id <NSKeyedArchiverDelegate>)delegate}
+	setDelegate:${1:(id <NSKeyedUnarchiverDelegate>)delegate}
+	setDelegate:${1:(id <NSNetServiceBrowserDelegate>)delegate}
+	setDelegate:${1:(id <NSNetServiceDelegate>)delegate}
+	setDelegate:${1:(id <NSMachPortDelegate>)anObject}
+	setDelegate:${1:(id <NSPortDelegate>)anObject}
+	setDelegate:${1:(id <NSStreamDelegate>)delegate}
+	setDelegate:${1:(id <NSXMLParserDelegate>)delegate}
 snippet setDictionary:
 	setDictionary:${1:(NSDictionary*)otherDictionary}
 snippet setDiskCapacity:
@@ -4151,10 +4268,8 @@ snippet setDouble:forKey:
 	setDouble:${1:(double)value} forKey:${2:(NSString*)defaultName}
 snippet setEditing:animated:
 	setEditing:${1:(BOOL)editing} animated:${2:(BOOL)animated}
-snippet -setEditing:animated:
-	-setEditing:animated:
-snippet -setEnabled:forSegmentAtIndex:
-	-setEnabled:forSegmentAtIndex:
+snippet setEnabled:forSegmentAtIndex:
+	setEnabled:${1:(BOOL)enabled} forSegmentAtIndex:${2:(NSUInteger)segment}
 snippet setEra:
 	setEra:${1:(NSInteger)v}
 snippet setEraSymbols:NS_AVAILABLE
@@ -4208,22 +4323,22 @@ snippet setHasThousandSeparators:
 	setHasThousandSeparators:${1:(BOOL)flag}
 snippet setHidesBackButton:animated:
 	setHidesBackButton:${1:(BOOL)hidesBackButton} animated:${2:(BOOL)animated}
-snippet -setHighlighted:animated:
-	-setHighlighted:animated:
+snippet setHighlighted:animated:
+	setHighlighted:${1:(BOOL)highlighted} animated:${2:(BOOL)animated}
 snippet setHour:
 	setHour:${1:(NSInteger)v}
 snippet setIgnoredWords:
 	setIgnoredWords:${1:(NSArray*)words}
-snippet -setImage:forSegmentAtIndex:
-	-setImage:forSegmentAtIndex:
-snippet -setImage:forState:
-	-setImage:forState:
+snippet setImage:forSegmentAtIndex:
+	setImage:${1:(UIImage*)image} forSegmentAtIndex:${2:(NSUInteger)segment}
+snippet setImage:forState:
+	setImage:${1:(UIImage*)image} forState:${2:(UIControlState)state}
 snippet setInteger:forKey:
 	setInteger:${1:(NSInteger)value} forKey:${2:(NSString*)defaultName}
 snippet setInternationalCurrencySymbol:NS_AVAILABLE
 	setInternationalCurrencySymbol:${1:(NSString*)string} NS_AVAILABLE(10_4, 2_0)
-snippet -setItems:animated:
-	-setItems:animated:
+snippet setItems:animated:
+	setItems:${1:(NSArray*)items} animated:${2:(BOOL)animated}
 snippet setKeepAliveTimeout:handler:__OSX_AVAILABLE_STARTING
 	setKeepAliveTimeout:${1:(NSTimeInterval)timeout} handler:${2:(void(^)(void))keepAliveHandler} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_4_0)
 snippet setLeftBarButtonItem:animated:
@@ -4236,7 +4351,7 @@ snippet setLenient:NS_AVAILABLE
 snippet setLevelsOfUndo:
 	setLevelsOfUndo:${1:(NSUInteger)levels}
 snippet setLineDash:count:phase:
-	setLineDash:${1:(const} CGFloat*)pattern count:${2:(NSInteger)count} phase:${3:(CGFloat)phase}
+	setLineDash:${1:(const CGFloat*)pattern} count:${2:(NSInteger)count} phase:${3:(CGFloat)phase}
 snippet setLocale:
 	setLocale:${1:(NSLocale*)locale}
 	setLocale:${1:(id)locale}
@@ -4248,8 +4363,8 @@ snippet setLongEraSymbols:NS_AVAILABLE
 	setLongEraSymbols:${1:(NSArray*)array} NS_AVAILABLE(10_5, 2_0)
 snippet setMainDocumentURL:
 	setMainDocumentURL:${1:(NSURL*)URL}
-snippet -setMarkedText:selectedRange:
-	-setMarkedText:selectedRange:
+snippet setMarkedText:selectedRange:
+	setMarkedText:${1:(NSString*)markedText} selectedRange:${2:(NSRange)selectedRange}
 snippet setMaxConcurrentOperationCount:
 	setMaxConcurrentOperationCount:${1:(NSInteger)cnt}
 snippet setMaximum:
@@ -4295,8 +4410,8 @@ snippet setName:
 snippet setName:NS_AVAILABLE
 	setName:${1:(NSString*)n} NS_AVAILABLE(10_5, 2_0)
 	setName:${1:(NSString*)n} NS_AVAILABLE(10_6, 4_0)
-snippet -setNavigationBarHidden:animated:
-	-setNavigationBarHidden:animated:
+snippet setNavigationBarHidden:animated:
+	setNavigationBarHidden:${1:(BOOL)hidden} animated:${2:(BOOL)animated}
 snippet setNeedsDisplay
 	setNeedsDisplay
 snippet setNeedsDisplayInRect:
@@ -4321,9 +4436,8 @@ snippet setNotANumberSymbol:NS_AVAILABLE
 	setNotANumberSymbol:${1:(NSString*)string} NS_AVAILABLE(10_4, 2_0)
 snippet setNumberStyle:NS_AVAILABLE
 	setNumberStyle:${1:(NSNumberFormatterStyle)style} NS_AVAILABLE(10_4, 2_0)
-snippet -setObject:forKey:
-	-setObject:forKey:
 snippet setObject:forKey:
+	setObject:${1:(id)obj} forKey:${2:(id)key}
 	setObject:${1:(id)anObject} forKey:${2:(id)aKey}
 	setObject:${1:(id)value} forKey:${2:(NSString*)defaultName}
 snippet setObject:forKey:cost:
@@ -4332,8 +4446,8 @@ snippet setObjectZone:
 	setObjectZone:${1:(NSZone*)zone}
 snippet setObservationInfo:
 	setObservationInfo:${1:(void*)observationInfo}
-snippet -setOn:animated:
-	-setOn:animated:
+snippet setOn:animated:
+	setOn:${1:(BOOL)on} animated:${2:(BOOL)animated}
 snippet setOutputFormat:
 	setOutputFormat:${1:(NSPropertyListFormat)format}
 snippet setPMSymbol:NS_AVAILABLE
@@ -4402,8 +4516,8 @@ snippet setSecond:
 	setSecond:${1:(NSInteger)v}
 snippet setSecondaryGroupingSize:NS_AVAILABLE
 	setSecondaryGroupingSize:${1:(NSUInteger)number} NS_AVAILABLE(10_4, 2_0)
-snippet -setSelected:animated:
-	-setSelected:animated:
+snippet setSelected:animated:
+	setSelected:${1:(BOOL)selected} animated:${2:(BOOL)animated}
 snippet setSelector:
 	setSelector:${1:(SEL)selector}
 snippet setSet:
@@ -4436,8 +4550,8 @@ snippet setStandaloneQuarterSymbols:NS_AVAILABLE
 	setStandaloneQuarterSymbols:${1:(NSArray*)array} NS_AVAILABLE(10_5, 2_0)
 snippet setStandaloneWeekdaySymbols:NS_AVAILABLE
 	setStandaloneWeekdaySymbols:${1:(NSArray*)array} NS_AVAILABLE(10_5, 2_0)
-snippet -setStatusBarHidden:animated:__OSX_AVAILABLE_BUT_DEPRECATED
-	-setStatusBarHidden:animated:__OSX_AVAILABLE_BUT_DEPRECATED
+snippet setStatusBarHidden:animated:__OSX_AVAILABLE_BUT_DEPRECATED
+	setStatusBarHidden:${1:(BOOL)hidden} animated:${2:(BOOL)animated} __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_NA,__MAC_NA,__IPHONE_2_0,__IPHONE_3_2)
 snippet setStatusBarHidden:withAnimation:__OSX_AVAILABLE_STARTING
 	setStatusBarHidden:${1:(BOOL)hidden} withAnimation:${2:(UIStatusBarAnimation)animation} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_2)
 snippet setStatusBarOrientation:animated:
@@ -4484,16 +4598,16 @@ snippet setTimeZone:NS_AVAILABLE
 	setTimeZone:${1:(NSTimeZone*)tz} NS_AVAILABLE(10_4, 2_0)
 snippet setTimeoutInterval:
 	setTimeoutInterval:${1:(NSTimeInterval)seconds}
-snippet -setTitle:forSegmentAtIndex:
-	-setTitle:forSegmentAtIndex:
-snippet -setTitle:forState:
-	-setTitle:forState:
-snippet -setTitleColor:forState:
-	-setTitleColor:forState:
-snippet -setTitleShadowColor:forState:
-	-setTitleShadowColor:forState:
-snippet -setToolbarHidden:animated:__OSX_AVAILABLE_STARTING
-	-setToolbarHidden:animated:__OSX_AVAILABLE_STARTING
+snippet setTitle:forSegmentAtIndex:
+	setTitle:${1:(NSString*)title} forSegmentAtIndex:${2:(NSUInteger)segment}
+snippet setTitle:forState:
+	setTitle:${1:(NSString*)title} forState:${2:(UIControlState)state}
+snippet setTitleColor:forState:
+	setTitleColor:${1:(UIColor*)color} forState:${2:(UIControlState)state}
+snippet setTitleShadowColor:forState:
+	setTitleShadowColor:${1:(UIColor*)color} forState:${2:(UIControlState)state}
+snippet setToolbarHidden:animated:__OSX_AVAILABLE_STARTING
+	setToolbarHidden:${1:(BOOL)hidden} animated:${2:(BOOL)animated} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet setToolbarItems:animated:__OSX_AVAILABLE_STARTING
 	setToolbarItems:${1:(NSArray*)toolbarItems} animated:${2:(BOOL)animated} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet setTotalCostLimit:
@@ -4510,8 +4624,8 @@ snippet setUsesGroupingSeparator:NS_AVAILABLE
 	setUsesGroupingSeparator:${1:(BOOL)b} NS_AVAILABLE(10_4, 2_0)
 snippet setUsesSignificantDigits:NS_AVAILABLE
 	setUsesSignificantDigits:${1:(BOOL)b} NS_AVAILABLE(10_5, 2_0)
-snippet -setValue:animated:
-	-setValue:animated:
+snippet setValue:animated:
+	setValue:${1:(float)value} animated:${2:(BOOL)animated}
 snippet setValue:forHTTPHeaderField:
 	setValue:${1:(NSString*)value} forHTTPHeaderField:${2:(NSString*)field}
 snippet setValue:forKey:NS_AVAILABLE
@@ -4535,8 +4649,8 @@ snippet setVeryShortWeekdaySymbols:NS_AVAILABLE
 	setVeryShortWeekdaySymbols:${1:(NSArray*)array} NS_AVAILABLE(10_5, 2_0)
 snippet setViewControllers:animated:
 	setViewControllers:${1:(NSArray*)viewControllers} animated:${2:(BOOL)animated}
-snippet -setViewControllers:animated:__OSX_AVAILABLE_STARTING
-	-setViewControllers:animated:__OSX_AVAILABLE_STARTING
+snippet setViewControllers:animated:__OSX_AVAILABLE_STARTING
+	setViewControllers:${1:(NSArray*)viewControllers} animated:${2:(BOOL)animated} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet setVolatileDomain:forName:
 	setVolatileDomain:${1:(NSDictionary*)domain} forName:${2:(NSString*)domainName}
 snippet setWeek:
@@ -4547,8 +4661,8 @@ snippet setWeekdayOrdinal:
 	setWeekdayOrdinal:${1:(NSInteger)v}
 snippet setWeekdaySymbols:NS_AVAILABLE
 	setWeekdaySymbols:${1:(NSArray*)array} NS_AVAILABLE(10_4, 2_0)
-snippet -setWidth:forSegmentAtIndex:
-	-setWidth:forSegmentAtIndex:
+snippet setWidth:forSegmentAtIndex:
+	setWidth:${1:(CGFloat)width} forSegmentAtIndex:${2:(NSUInteger)segment}
 snippet setYear:
 	setYear:${1:(NSInteger)v}
 snippet setZeroSymbol:NS_AVAILABLE
@@ -4563,8 +4677,8 @@ snippet sharedSupportPath
 	sharedSupportPath
 snippet sharedSupportURLNS_AVAILABLE
 	sharedSupportURL NS_AVAILABLE(10_6, 4_0)
-snippet -shiftIndexesStartingAtIndex:by:
-	-shiftIndexesStartingAtIndex:by:
+snippet shiftIndexesStartingAtIndex:by:
+	shiftIndexesStartingAtIndex:${1:(NSUInteger)index} by:${2:(NSInteger)delta}
 snippet shortMonthSymbolsNS_AVAILABLE
 	shortMonthSymbols NS_AVAILABLE(10_4, 2_0)
 snippet shortQuarterSymbolsNS_AVAILABLE
@@ -4579,8 +4693,8 @@ snippet shortValue
 	shortValue
 snippet shortWeekdaySymbolsNS_AVAILABLE
 	shortWeekdaySymbols NS_AVAILABLE(10_4, 2_0)
-snippet -shouldAutorotateToInterfaceOrientation:
-	-shouldAutorotateToInterfaceOrientation:
+snippet shouldAutorotateToInterfaceOrientation:
+	shouldAutorotateToInterfaceOrientation:${1:(UIInterfaceOrientation)toInterfaceOrientation}
 snippet shouldProcessNamespaces
 	shouldProcessNamespaces
 snippet shouldReportNamespacePrefixes
@@ -4599,18 +4713,18 @@ snippet showInView:
 	showInView:${1:(UIView*)view}
 snippet signal
 	signal
-snippet -sizeForNumberOfPages:
-	-sizeForNumberOfPages:
-snippet -sizeThatFits:
-	-sizeThatFits:
-snippet -sizeToFit
-	-sizeToFit
-snippet -sizeWithFont:
-	-sizeWithFont:
-snippet -sizeWithFont:constrainedToSize:
-	-sizeWithFont:constrainedToSize:
-snippet -sizeWithFont:constrainedToSize:lineBreakMode:
-	-sizeWithFont:constrainedToSize:lineBreakMode:
+snippet sizeForNumberOfPages:
+	sizeForNumberOfPages:${1:(NSInteger)pageCount}
+snippet sizeThatFits:
+	sizeThatFits:${1:(CGSize)size}
+snippet sizeToFit
+	sizeToFit
+snippet sizeWithFont:
+	sizeWithFont:${1:(UIFont*)font}
+snippet sizeWithFont:constrainedToSize:
+	sizeWithFont:${1:(UIFont*)font} constrainedToSize:${2:(CGSize)size}
+snippet sizeWithFont:constrainedToSize:lineBreakMode:
+	sizeWithFont:${1:(UIFont*)font} constrainedToSize:${2:(CGSize)size} lineBreakMode:${3:(UILineBreakMode)lineBreakMode}
 snippet sizeWithFont:forWidth:lineBreakMode:
 	sizeWithFont:${1:(UIFont*)font} forWidth:${2:(CGFloat)width} lineBreakMode:${3:(UILineBreakMode)lineBreakMode}
 snippet sizeWithFont:minFontSize:actualFontSize:forWidth:lineBreakMode:
@@ -4619,18 +4733,18 @@ snippet skipDescendantsNS_AVAILABLE
 	skipDescendants NS_AVAILABLE(10_6, 4_0)
 snippet skipDescendents
 	skipDescendents
-snippet -smallestEncoding
-	-smallestEncoding
+snippet smallestEncoding
+	smallestEncoding
 snippet socket
 	socket
 snippet socketType
 	socketType
 snippet sortUsingComparator:NS_AVAILABLE
 	sortUsingComparator:${1:(NSComparator)cmptr} NS_AVAILABLE(10_6, 4_0)
-snippet -sortUsingDescriptors:
-	-sortUsingDescriptors:
+snippet sortUsingDescriptors:
+	sortUsingDescriptors:${1:(NSArray*)sortDescriptors}
 snippet sortUsingFunction:context:
-	sortUsingFunction:${1:(NSInteger(*)(id,} id, void*))compare context:${2:(void*)context}
+	sortUsingFunction:${1:(NSInteger(*)(id, id, void*))compare} context:${2:(void*)context}
 snippet sortUsingSelector:
 	sortUsingSelector:${1:(SEL)comparator}
 snippet sortWithOptions:usingComparator:NS_AVAILABLE
@@ -4641,14 +4755,14 @@ snippet sortedArrayHint
 	sortedArrayHint
 snippet sortedArrayUsingComparator:NS_AVAILABLE
 	sortedArrayUsingComparator:${1:(NSComparator)cmptr} NS_AVAILABLE(10_6, 4_0)
-snippet -sortedArrayUsingDescriptors:
-	-sortedArrayUsingDescriptors:
-snippet -sortedArrayUsingDescriptors:NS_AVAILABLE
-	-sortedArrayUsingDescriptors:NS_AVAILABLE
+snippet sortedArrayUsingDescriptors:
+	sortedArrayUsingDescriptors:${1:(NSArray*)sortDescriptors}
+snippet sortedArrayUsingDescriptors:NS_AVAILABLE
+	sortedArrayUsingDescriptors:${1:(NSArray*)sortDescriptors} NS_AVAILABLE(10_6, 4_0)
 snippet sortedArrayUsingFunction:context:
-	sortedArrayUsingFunction:${1:(NSInteger(*)(id,} id, void*))comparator context:${2:(void*)context}
+	sortedArrayUsingFunction:${1:(NSInteger(*)(id, id, void*))comparator} context:${2:(void*)context}
 snippet sortedArrayUsingFunction:context:hint:
-	sortedArrayUsingFunction:${1:(NSInteger(*)(id,} id, void*))comparator context:${2:(void*)context} hint:${3:(NSData*)hint}
+	sortedArrayUsingFunction:${1:(NSInteger(*)(id, id, void*))comparator} context:${2:(void*)context} hint:${3:(NSData*)hint}
 snippet sortedArrayUsingSelector:
 	sortedArrayUsingSelector:${1:(SEL)comparator}
 snippet sortedArrayWithOptions:usingComparator:NS_AVAILABLE
@@ -4756,7 +4870,7 @@ snippet stringFromNumber:NS_AVAILABLE
 snippet stringValue
 	stringValue
 snippet stringWithFileSystemRepresentation:length:
-	stringWithFileSystemRepresentation:${1:(const} char*)str length:${2:(NSUInteger)len}
+	stringWithFileSystemRepresentation:${1:(const char*)str} length:${2:(NSUInteger)len}
 snippet stringsByAppendingPaths:
 	stringsByAppendingPaths:${1:(NSArray*)paths}
 snippet stroke
@@ -4777,8 +4891,8 @@ snippet substringFromIndex:
 	substringFromIndex:${1:(NSUInteger)from}
 snippet substringToIndex:
 	substringToIndex:${1:(NSUInteger)to}
-snippet -substringWithRange:
-	-substringWithRange:
+snippet substringWithRange:
+	substringWithRange:${1:(NSRange)range}
 snippet suggestedFilename
 	suggestedFilename
 snippet symbolicLinkDestination
@@ -4795,16 +4909,16 @@ snippet systemUptimeNS_AVAILABLE
 	systemUptime NS_AVAILABLE(10_6, 4_0)
 snippet systemVersion
 	systemVersion
-snippet -tabBar:didBeginCustomizingItems:
-	-tabBar:didBeginCustomizingItems:
-snippet -tabBar:didEndCustomizingItems:changed:
-	-tabBar:didEndCustomizingItems:changed:
-snippet -tabBar:didSelectItem:
-	-tabBar:didSelectItem:
-snippet -tabBar:willBeginCustomizingItems:
-	-tabBar:willBeginCustomizingItems:
-snippet -tabBar:willEndCustomizingItems:changed:
-	-tabBar:willEndCustomizingItems:changed:
+snippet tabBar:didBeginCustomizingItems:
+	tabBar:${1:(UITabBar*)tabBar} didBeginCustomizingItems:${2:(NSArray*)items}
+snippet tabBar:didEndCustomizingItems:changed:
+	tabBar:${1:(UITabBar*)tabBar} didEndCustomizingItems:${2:(NSArray*)items} changed:${3:(BOOL)changed}
+snippet tabBar:didSelectItem:
+	tabBar:${1:(UITabBar*)tabBar} didSelectItem:${2:(UITabBarItem*)item}
+snippet tabBar:willBeginCustomizingItems:
+	tabBar:${1:(UITabBar*)tabBar} willBeginCustomizingItems:${2:(NSArray*)items}
+snippet tabBar:willEndCustomizingItems:changed:
+	tabBar:${1:(UITabBar*)tabBar} willEndCustomizingItems:${2:(NSArray*)items} changed:${3:(BOOL)changed}
 snippet tabBarController:didEndCustomizingViewControllers:changed:
 	tabBarController:${1:(UITabBarController*)tabBarController} didEndCustomizingViewControllers:${2:(NSArray*)viewControllers} changed:${3:(BOOL)changed}
 snippet tabBarController:didSelectViewController:
@@ -4841,28 +4955,28 @@ snippet tableView:heightForHeaderInSection:
 	tableView:${1:(UITableView*)tableView} heightForHeaderInSection:${2:(NSInteger)section}
 snippet tableView:heightForRowAtIndexPath:
 	tableView:${1:(UITableView*)tableView} heightForRowAtIndexPath:${2:(NSIndexPath*)indexPath}
-snippet -tableView:indentationLevelForRowAtIndexPath:
-	-tableView:indentationLevelForRowAtIndexPath:
+snippet tableView:indentationLevelForRowAtIndexPath:
+	tableView:${1:(UITableView*)tableView} indentationLevelForRowAtIndexPath:${2:(NSIndexPath*)indexPath}
 snippet tableView:moveRowAtIndexPath:toIndexPath:
 	tableView:${1:(UITableView*)tableView} moveRowAtIndexPath:${2:(NSIndexPath*)sourceIndexPath} toIndexPath:${3:(NSIndexPath*)destinationIndexPath}
 snippet tableView:numberOfRowsInSection:
 	tableView:${1:(UITableView*)tableView} numberOfRowsInSection:${2:(NSInteger)section}
-snippet -tableView:sectionForSectionIndexTitle:atIndex:
-	-tableView:sectionForSectionIndexTitle:atIndex:
+snippet tableView:sectionForSectionIndexTitle:atIndex:
+	tableView:${1:(UITableView*)tableView} sectionForSectionIndexTitle:${2:(NSString*)title} atIndex:${3:(NSInteger)index}
 snippet tableView:shouldIndentWhileEditingRowAtIndexPath:
 	tableView:${1:(UITableView*)tableView} shouldIndentWhileEditingRowAtIndexPath:${2:(NSIndexPath*)indexPath}
-snippet -tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:
-	-tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:
+snippet tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:
+	tableView:${1:(UITableView*)tableView} targetIndexPathForMoveFromRowAtIndexPath:${2:(NSIndexPath*)sourceIndexPath} toProposedIndexPath:${3:(NSIndexPath*)proposedDestinationIndexPath}
 snippet tableView:titleForDeleteConfirmationButtonForRowAtIndexPath:__OSX_AVAILABLE_STARTING
 	tableView:${1:(UITableView*)tableView} titleForDeleteConfirmationButtonForRowAtIndexPath:${2:(NSIndexPath*)indexPath} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet tableView:titleForFooterInSection:
 	tableView:${1:(UITableView*)tableView} titleForFooterInSection:${2:(NSInteger)section}
-snippet -tableView:titleForHeaderInSection:
-	-tableView:titleForHeaderInSection:
-snippet -tableView:viewForFooterInSection:
-	-tableView:viewForFooterInSection:
-snippet -tableView:viewForHeaderInSection:
-	-tableView:viewForHeaderInSection:
+snippet tableView:titleForHeaderInSection:
+	tableView:${1:(UITableView*)tableView} titleForHeaderInSection:${2:(NSInteger)section}
+snippet tableView:viewForFooterInSection:
+	tableView:${1:(UITableView*)tableView} viewForFooterInSection:${2:(NSInteger)section}
+snippet tableView:viewForHeaderInSection:
+	tableView:${1:(UITableView*)tableView} viewForHeaderInSection:${2:(NSInteger)section}
 snippet tableView:willBeginEditingRowAtIndexPath:
 	tableView:${1:(UITableView*)tableView} willBeginEditingRowAtIndexPath:${2:(NSIndexPath*)indexPath}
 snippet tableView:willDeselectRowAtIndexPath:__OSX_AVAILABLE_STARTING
@@ -4871,8 +4985,8 @@ snippet tableView:willDisplayCell:forRowAtIndexPath:
 	tableView:${1:(UITableView*)tableView} willDisplayCell:${2:(UITableViewCell*)cell} forRowAtIndexPath:${3:(NSIndexPath*)indexPath}
 snippet tableView:willSelectRowAtIndexPath:
 	tableView:${1:(UITableView*)tableView} willSelectRowAtIndexPath:${2:(NSIndexPath*)indexPath}
-snippet -takePicture__OSX_AVAILABLE_STARTING
-	-takePicture__OSX_AVAILABLE_STARTING
+snippet takePicture__OSX_AVAILABLE_STARTING
+	takePicture __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_1)
 snippet takeStoredValue:forKey:NS_DEPRECATED
 	takeStoredValue:${1:(id)value} forKey:${2:(NSString*)key} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet takeValue:forKey:NS_DEPRECATED
@@ -4898,23 +5012,23 @@ snippet textAttributesForPositiveValues
 snippet textAttributesForZeroNS_AVAILABLE
 	textAttributesForZero NS_AVAILABLE(10_4, 2_0)
 snippet textDidChange:
-	textDidChange:${1:(id} <UITextInput>)textInput
+	textDidChange:${1:(id <UITextInput>)textInput}
 snippet textEncodingName
 	textEncodingName
-snippet -textField:shouldChangeCharactersInRange:replacementString:
-	-textField:shouldChangeCharactersInRange:replacementString:
-snippet -textFieldDidBeginEditing:
-	-textFieldDidBeginEditing:
-snippet -textFieldDidEndEditing:
-	-textFieldDidEndEditing:
-snippet -textFieldShouldBeginEditing:
-	-textFieldShouldBeginEditing:
-snippet -textFieldShouldClear:
-	-textFieldShouldClear:
-snippet -textFieldShouldEndEditing:
-	-textFieldShouldEndEditing:
-snippet -textFieldShouldReturn:
-	-textFieldShouldReturn:
+snippet textField:shouldChangeCharactersInRange:replacementString:
+	textField:${1:(UITextField*)textField} shouldChangeCharactersInRange:${2:(NSRange)range} replacementString:${3:(NSString*)string}
+snippet textFieldDidBeginEditing:
+	textFieldDidBeginEditing:${1:(UITextField*)textField}
+snippet textFieldDidEndEditing:
+	textFieldDidEndEditing:${1:(UITextField*)textField}
+snippet textFieldShouldBeginEditing:
+	textFieldShouldBeginEditing:${1:(UITextField*)textField}
+snippet textFieldShouldClear:
+	textFieldShouldClear:${1:(UITextField*)textField}
+snippet textFieldShouldEndEditing:
+	textFieldShouldEndEditing:${1:(UITextField*)textField}
+snippet textFieldShouldReturn:
+	textFieldShouldReturn:${1:(UITextField*)textField}
 snippet textInRange:
 	textInRange:${1:(UITextRange*)range}
 snippet textRangeFromPosition:toPosition:
@@ -4940,7 +5054,7 @@ snippet textViewShouldBeginEditing:
 snippet textViewShouldEndEditing:
 	textViewShouldEndEditing:${1:(UITextView*)textView}
 snippet textWillChange:
-	textWillChange:${1:(id} <UITextInput>)textInput
+	textWillChange:${1:(id <UITextInput>)textInput}
 snippet thousandSeparator
 	thousandSeparator
 snippet threadDictionary
@@ -4971,14 +5085,14 @@ snippet titleColorForState:
 	titleColorForState:${1:(UIControlState)state}
 snippet titleForSegmentAtIndex:
 	titleForSegmentAtIndex:${1:(NSUInteger)segment}
-snippet -titleForState:
-	-titleForState:
+snippet titleForState:
+	titleForState:${1:(UIControlState)state}
 snippet titleRectForContentRect:
 	titleRectForContentRect:${1:(CGRect)contentRect}
 snippet titleShadowColorForState:
 	titleShadowColorForState:${1:(UIControlState)state}
-snippet -totalCostLimit
-	-totalCostLimit
+snippet totalCostLimit
+	totalCostLimit
 snippet touchesBegan:withEvent:
 	touchesBegan:${1:(NSSet*)touches} withEvent:${2:(UIEvent*)event}
 snippet touchesCancelled:withEvent:
@@ -4993,18 +5107,18 @@ snippet touchesForWindow:
 	touchesForWindow:${1:(UIWindow*)window}
 snippet touchesMoved:withEvent:
 	touchesMoved:${1:(NSSet*)touches} withEvent:${2:(UIEvent*)event}
-snippet -touchesShouldBegin:withEvent:inContentView:
-	-touchesShouldBegin:withEvent:inContentView:
-snippet -touchesShouldCancelInContentView:
-	-touchesShouldCancelInContentView:
+snippet touchesShouldBegin:withEvent:inContentView:
+	touchesShouldBegin:${1:(NSSet*)touches} withEvent:${2:(UIEvent*)event} inContentView:${3:(UIView*)view}
+snippet touchesShouldCancelInContentView:
+	touchesShouldCancelInContentView:${1:(UIView*)view}
 snippet trackRectForBounds:
 	trackRectForBounds:${1:(CGRect)bounds}
-snippet -transformedValue:
-	-transformedValue:
-snippet -translationInView:
-	-translationInView:
+snippet transformedValue:
+	transformedValue:${1:(id)value}
+snippet translationInView:
+	translationInView:${1:(UIView*)view}
 snippet truncateFileAtOffset:
-	truncateFileAtOffset:${1:(unsigned} long long)offset
+	truncateFileAtOffset:${1:(unsigned long long)offset}
 snippet tryLock
 	tryLock
 snippet tryLockWhenCondition:
@@ -5041,8 +5155,8 @@ snippet unlockWithCondition:
 	unlockWithCondition:${1:(NSInteger)condition}
 snippet unmarkText
 	unmarkText
-snippet -unregisterForRemoteNotifications__OSX_AVAILABLE_STARTING
-	-unregisterForRemoteNotifications__OSX_AVAILABLE_STARTING
+snippet unregisterForRemoteNotifications__OSX_AVAILABLE_STARTING
+	unregisterForRemoteNotifications __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet unscheduleFromRunLoop:forMode:NS_AVAILABLE
 	unscheduleFromRunLoop:${1:(NSRunLoop*)aRunLoop} forMode:${2:(NSString*)mode} NS_AVAILABLE(10_5, 2_0)
 snippet unsignedCharValue
@@ -5057,10 +5171,10 @@ snippet unsignedLongValue
 	unsignedLongValue
 snippet unsignedShortValue
 	unsignedShortValue
-snippet -update
-	-update
-snippet -updateCurrentPageDisplay
-	-updateCurrentPageDisplay
+snippet update
+	update
+snippet updateCurrentPageDisplay
+	updateCurrentPageDisplay
 snippet updateFromPath:
 	updateFromPath:${1:(NSString*)path}
 snippet uppercaseString
@@ -5092,12 +5206,12 @@ snippet valueForUndefinedKey:NS_AVAILABLE
 	valueForUndefinedKey:${1:(NSString*)key} NS_AVAILABLE(10_3, 2_0)
 snippet valuesForKeys:NS_DEPRECATED
 	valuesForKeys:${1:(NSArray*)keys} NS_DEPRECATED(10_0, 10_3, 2_0, 2_0)
-snippet -valuesForPasteboardType:inItemSet:
-	-valuesForPasteboardType:inItemSet:
+snippet valuesForPasteboardType:inItemSet:
+	valuesForPasteboardType:${1:(NSString*)pasteboardType} inItemSet:${2:(NSIndexSet*)itemSet}
 snippet variable
 	variable
-snippet -velocityInView:
-	-velocityInView:
+snippet velocityInView:
+	velocityInView:${1:(UIView*)view}
 snippet versionForClassName:
 	versionForClassName:${1:(NSString*)className}
 snippet veryShortMonthSymbolsNS_AVAILABLE
@@ -5110,30 +5224,30 @@ snippet veryShortWeekdaySymbolsNS_AVAILABLE
 	veryShortWeekdaySymbols NS_AVAILABLE(10_5, 2_0)
 snippet videoEditorController:didFailWithError:
 	videoEditorController:${1:(UIVideoEditorController*)editor} didFailWithError:${2:(NSError*)error}
-snippet -videoEditorController:didSaveEditedVideoToPath:
-	-videoEditorController:didSaveEditedVideoToPath:
+snippet videoEditorController:didSaveEditedVideoToPath:
+	videoEditorController:${1:(UIVideoEditorController*)editor} didSaveEditedVideoToPath:${2:(NSString*)editedVideoPath}
 snippet videoEditorControllerDidCancel:
 	videoEditorControllerDidCancel:${1:(UIVideoEditorController*)editor}
-snippet -viewDidAppear:
-	-viewDidAppear:
-snippet -viewDidDisappear:
-	-viewDidDisappear:
-snippet -viewDidLoad
-	-viewDidLoad
-snippet -viewDidUnload__OSX_AVAILABLE_STARTING
-	-viewDidUnload__OSX_AVAILABLE_STARTING
+snippet viewDidAppear:
+	viewDidAppear:${1:(BOOL)animated}
+snippet viewDidDisappear:
+	viewDidDisappear:${1:(BOOL)animated}
+snippet viewDidLoad
+	viewDidLoad
+snippet viewDidUnload__OSX_AVAILABLE_STARTING
+	viewDidUnload __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet viewForRow:forComponent:
 	viewForRow:${1:(NSInteger)row} forComponent:${2:(NSInteger)component}
-snippet -viewForZoomingInScrollView:
-	-viewForZoomingInScrollView:
-snippet -viewPrintFormatter
-	-viewPrintFormatter
-snippet -viewWillAppear:
-	-viewWillAppear:
-snippet -viewWillDisappear:
-	-viewWillDisappear:
-snippet -viewWithTag:
-	-viewWithTag:
+snippet viewForZoomingInScrollView:
+	viewForZoomingInScrollView:${1:(UIScrollView*)scrollView}
+snippet viewPrintFormatter
+	viewPrintFormatter
+snippet viewWillAppear:
+	viewWillAppear:${1:(BOOL)animated}
+snippet viewWillDisappear:
+	viewWillDisappear:${1:(BOOL)animated}
+snippet viewWithTag:
+	viewWithTag:${1:(NSInteger)tag}
 snippet visibleCells
 	visibleCells
 snippet volatileDomainForName:
@@ -5170,8 +5284,8 @@ snippet willAnimateFirstHalfOfRotationToInterfaceOrientation:duration:
 	willAnimateFirstHalfOfRotationToInterfaceOrientation:${1:(UIInterfaceOrientation)toInterfaceOrientation} duration:${2:(NSTimeInterval)duration}
 snippet willAnimateRotationToInterfaceOrientation:duration:__OSX_AVAILABLE_STARTING
 	willAnimateRotationToInterfaceOrientation:${1:(UIInterfaceOrientation)toInterfaceOrientation} duration:${2:(NSTimeInterval)duration} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
-snippet -willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration:
-	-willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration:
+snippet willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration:
+	willAnimateSecondHalfOfRotationFromInterfaceOrientation:${1:(UIInterfaceOrientation)fromInterfaceOrientation} duration:${2:(NSTimeInterval)duration}
 snippet willChange:valuesAtIndexes:forKey:
 	willChange:${1:(NSKeyValueChange)changeKind} valuesAtIndexes:${2:(NSIndexSet*)indexes} forKey:${3:(NSString*)key}
 snippet willChangeValueForKey:
@@ -5182,10 +5296,10 @@ snippet willMoveToSuperview:
 	willMoveToSuperview:${1:(UIView*)newSuperview}
 snippet willMoveToWindow:
 	willMoveToWindow:${1:(UIWindow*)newWindow}
-snippet -willPresentActionSheet:
-	-willPresentActionSheet:
-snippet -willPresentAlertView:
-	-willPresentAlertView:
+snippet willPresentActionSheet:
+	willPresentActionSheet:${1:(UIActionSheet*)actionSheet}
+snippet willPresentAlertView:
+	willPresentAlertView:${1:(UIAlertView*)alertView}
 snippet willRemoveSubview:
 	willRemoveSubview:${1:(UIView*)subview}
 snippet willRotateToInterfaceOrientation:duration:
@@ -5193,7 +5307,7 @@ snippet willRotateToInterfaceOrientation:duration:
 snippet willTransitionToState:__OSX_AVAILABLE_STARTING
 	willTransitionToState:${1:(UITableViewCellStateMask)state} __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_3_0)
 snippet write:maxLength:
-	write:${1:(const} uint8_t*)buffer maxLength:${2:(NSUInteger)len}
+	write:${1:(const uint8_t*)buffer} maxLength:${2:(NSUInteger)len}
 snippet writeData:
 	writeData:${1:(NSData*)data}
 snippet writeToFile:atomically:
@@ -5208,8 +5322,6 @@ snippet writeToFile:options:error:
 	writeToFile:${1:(NSString*)path} options:${2:(NSDataWritingOptions)writeOptionsMask} error:${3:(NSError**)errorPtr}
 snippet writeToURL:atomically:
 	writeToURL:${1:(NSURL*)url} atomically:${2:(BOOL)atomically}
-snippet -writeToURL:atomically:
-	-writeToURL:atomically:
 snippet writeToURL:atomically:NS_DEPRECATED
 	writeToURL:${1:(NSURL*)url} atomically:${2:(BOOL)atomically} NS_DEPRECATED(10_0, 10_4, 2_0, 2_0)
 snippet writeToURL:atomically:encoding:error:
@@ -6698,8 +6810,6 @@ snippet allScripts
 	allScripts
 snippet allowableMovement
 	allowableMovement
-snippet allowsReverseTransformation
-	allowsReverseTransformation
 snippet allowsSelectionDuringEditing
 	allowsSelectionDuringEditing
 snippet alwaysBounceHorizontal
@@ -6746,10 +6856,6 @@ snippet baselineAdjustment
 	baselineAdjustment
 snippet beginningOfDocument
 	beginningOfDocument
-snippet blackColor
-	blackColor
-snippet blueColor
-	blueColor
 snippet borderStyle
 	borderStyle
 snippet bounces
@@ -6758,8 +6864,6 @@ snippet bouncesZoom
 	bouncesZoom
 snippet bounds
 	bounds
-snippet brownColor
-	brownColor
 snippet buttonType
 	buttonType
 snippet calendar
@@ -6784,8 +6888,6 @@ snippet checkingTypes
 	checkingTypes
 snippet clearButtonMode
 	clearButtonMode
-snippet clearColor
-	clearColor
 snippet clearsContextBeforeDrawing
 	clearsContextBeforeDrawing
 snippet clearsOnBeginEditing
@@ -6794,8 +6896,6 @@ snippet clipsToBounds
 	clipsToBounds
 snippet colors
 	colors
-snippet commitAnimations
-	commitAnimations
 snippet completed
 	completed
 snippet contentEdgeInsets
@@ -6826,8 +6926,6 @@ snippet currentBackgroundImage
 	currentBackgroundImage
 snippet currentImage
 	currentImage
-snippet currentInputMode
-	currentInputMode
 snippet currentMaximumTrackImage
 	currentMaximumTrackImage
 snippet currentMinimumTrackImage
@@ -6848,20 +6946,12 @@ snippet customView
 	customView
 snippet customizableViewControllers
 	customizableViewControllers
-snippet cyanColor
-	cyanColor
-snippet darkGrayColor
-	darkGrayColor
-snippet darkTextColor
-	darkTextColor
 snippet dataSource
 	dataSource
 snippet datePickerMode
 	datePickerMode
 snippet decelerating
 	decelerating
-snippet defaultCStringEncoding
-	defaultCStringEncoding
 snippet defersCurrentPageDisplay
 	defersCurrentPageDisplay
 snippet delaysContentTouches
@@ -6915,8 +7005,6 @@ snippet evaluatedObject
 snippet exclusiveTouch
 	exclusiveTouch
 	expressionBlock
-snippet expressionForEvaluatedObject
-	expressionForEvaluatedObject
 snippet expressions
 	expressions
 snippet familyName
@@ -6935,10 +7023,6 @@ snippet gestureRecognizers
 	gestureRecognizers
 snippet grammarDetails
 	grammarDetails
-snippet grayColor
-	grayColor
-snippet greenColor
-	greenColor
 snippet hasAction
 	hasAction
 snippet headerHeight
@@ -6983,8 +7067,6 @@ snippet interfaceOrientation
 	interfaceOrientation
 snippet isAccessibilityElement
 	isAccessibilityElement
-snippet isPrintingAvailable
-	isPrintingAvailable
 snippet jobName
 	jobName
 snippet keyWindow
@@ -6995,8 +7077,6 @@ snippet keyboardType
 	keyboardType
 snippet languageMap
 	languageMap
-snippet layerClass
-	layerClass
 snippet leading
 	leading
 snippet leftBarButtonItem
@@ -7007,8 +7087,6 @@ snippet leftView
 	leftView
 snippet leftViewMode
 	leftViewMode
-snippet lightGrayColor
-	lightGrayColor
 snippet lineBreakMode
 	lineBreakMode
 snippet lineCapStyle
@@ -7021,10 +7099,6 @@ snippet loading
 	loading
 snippet localizedModel
 	localizedModel
-snippet magentaColor
-	magentaColor
-snippet mainScreen
-	mainScreen
 snippet markedTextRange
 	markedTextRange
 snippet markedTextStyle
@@ -7103,8 +7177,6 @@ snippet numberOfItems
 	numberOfItems
 snippet numberOfLines
 	numberOfLines
-snippet numberOfPages
-	numberOfPages
 snippet numberOfSegments
 	numberOfSegments
 snippet numberOfTapsRequired
@@ -7113,8 +7185,6 @@ snippet numberOfTouchesRequired
 	numberOfTouchesRequired
 snippet opaque
 	opaque
-snippet orangeColor
-	orangeColor
 snippet orientation
 	orientation
 snippet orthography
@@ -7165,26 +7235,18 @@ snippet printPaper
 	printPaper
 snippet printableRect
 	printableRect
-snippet printableUTIs
-	printableUTIs
 snippet printerID
 	printerID
 snippet printingItem
 	printingItem
 snippet printingItems
 	printingItems
-snippet processInfo
-	processInfo
 snippet progress
 	progress
 snippet progressViewStyle
 	progressViewStyle
 snippet prompt
 	prompt
-snippet purpleColor
-	purpleColor
-snippet redColor
-	redColor
 snippet repeatCalendar
 	repeatCalendar
 snippet repeatInterval
@@ -7363,8 +7425,6 @@ snippet tracking
 	tracking
 snippet transform
 	transform
-snippet transformedValueClass
-	transformedValueClass
 snippet unichar
 	unichar
 snippet uniqueIdentifier
@@ -7389,8 +7449,6 @@ snippet visible
 	visible
 snippet visibleViewController
 	visibleViewController
-snippet whiteColor
-	whiteColor
 snippet window
 	window
 snippet windowLevel
@@ -7399,8 +7457,6 @@ snippet windows
 	windows
 snippet xHeight
 	xHeight
-snippet yellowColor
-	yellowColor
 snippet zoomBouncing
 	zoomBouncing
 snippet zooming
